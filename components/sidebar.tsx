@@ -67,7 +67,7 @@ export default function Sidebar() {
   return (
     <div
       className={cn(
-        "h-screen bg-[#f8f8f9] shadow-md rounded-3xl flex flex-col shrink-0 transition-all duration-300 z-50",
+        "h-screen bg-[#f8f8f9] shadow-md absolute md:relative flex flex-col shrink-0 transition-all duration-300 z-50",
         expanded ? "w-[324px]" : "w-0",
       )}
     >
@@ -91,6 +91,11 @@ export default function Sidebar() {
               <Button
                 variant="ghost"
                 size="icon"
+                onClick={() => {
+                  if (window.innerWidth < 768) {
+                    setExpanded(false);
+                  }
+                }}
                 className="z-10 text-[#666666] hover:bg-[#f2f2f2]"
               >
                 <Play className="h-6 w-6" />
@@ -103,7 +108,14 @@ export default function Sidebar() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem onClick={handleNewConversation}>
+                  <DropdownMenuItem 
+                    onClick={(e) => {
+                    if (window.innerWidth < 768) {
+                      setExpanded(false);
+                    }
+                    handleNewConversation()
+                  }}
+                  >
                     <Plus className="mr-2 h-4 w-4" />
                     <span>New conversation</span>
                   </DropdownMenuItem>
@@ -123,7 +135,11 @@ export default function Sidebar() {
             <li key={item.name}>
               <Link
                 href={item.href}
-                // onClick={() => setExpanded(!expanded)}
+                onClick={() => {
+                  if (window.innerWidth < 768) {
+                    setExpanded(false);
+                  }
+                }}
                 className={cn(
                   "flex items-center gap-3 px-3 py-3 rounded-2xl transition-colors",
                   pathname === item.href ? "bg-[#f2f2f2]" : "hover:bg-[#f2f2f2]",

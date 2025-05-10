@@ -27,7 +27,7 @@ export default function DiscoverContent() {
 
   return (
     <div className="p-6 max-w-5xl mx-auto flex flex-col items-center mt-14 mb-36">
-      <div className="fixed bottom-0 w-full mx-auto max-w-3xl">
+      <div className="fixed p-2 bottom-0 w-full mx-auto max-w-3xl">
         <MessageInput/>
       </div>
       <h1 className="text-[26px] md:text-4xl font-semibold text-[#333333] mb-12">It's great to see you</h1>

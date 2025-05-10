@@ -23,7 +23,7 @@ export default function Home() {
   }, [isConversationStarted])
 
   return (
-    <div className="h-full flex flex-col md:justify-between items-center p-6 pb-24 overflow-y-auto relative">
+    <div className="h-full w-full flex flex-col md:justify-between items-center p-6 pb-24 overflow-y-auto relative">
       {/* Mobile: Text content at top */}
       <div className="md:hidden text-xs text-[#666666] mb-6 mt-16">
         <p>
