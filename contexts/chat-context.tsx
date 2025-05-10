@@ -17,6 +17,7 @@ type ChatContextType = {
   clearMessages: () => void
   isConversationStarted: boolean
   startConversation: (initialMessage?: string) => void
+  setIsConversationStarted: (value: boolean) => void;
 }
 
 const ChatContext = createContext<ChatContextType | undefined>(undefined)
@@ -88,6 +89,7 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
         clearMessages,
         isConversationStarted,
         startConversation,
+        setIsConversationStarted,
       }}
     >
       {children}

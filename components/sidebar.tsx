@@ -43,6 +43,7 @@ export default function Sidebar() {
   const pathname = usePathname()
   const [expanded, setExpanded] = useState(true)
   const { clearMessages } = useChat()
+  const { setIsConversationStarted } = useChat()
 
   // Check if screen is mobile on initial render and when window resizes
   useEffect(() => {
@@ -130,55 +131,61 @@ export default function Sidebar() {
 
 
       <nav className={`flex-1 ${expanded ? 'p-2' : 'p-0'} overflow-y-auto`}>
-        <ul className="space-y-1">
-          {sidebarItems.map((item) => (
-            <li key={item.name}>
-              <Link
-                href={item.href}
-                onClick={() => {
-                  if (window.innerWidth < 768) {
-                    setExpanded(false);
-                  }
-                }}
+      <ul className="space-y-1">
+        {sidebarItems.map((item) => (
+          <li key={item.name}>
+            <Link
+              href={item.href}
+              onClick={() => {
+                // Handle mobile sidebar collapse
+                if (window.innerWidth < 768) {
+                  setExpanded(false);
+                }
+                
+                // Reset conversation state when clicking on Discover
+                if (item.name === "Discover" || pathname === "/labs") {
+                  setIsConversationStarted(false);
+                }
+              }}
+              className={cn(
+                "flex items-center gap-3 px-3 py-3 rounded-2xl transition-colors",
+                pathname === item.href ? "bg-[#f2f2f2]" : "hover:bg-[#f2f2f2]",
+              )}
+            >
+              <div
                 className={cn(
-                  "flex items-center gap-3 px-3 py-3 rounded-2xl transition-colors",
-                  pathname === item.href ? "bg-[#f2f2f2]" : "hover:bg-[#f2f2f2]",
+                  "w-10 h-10 rounded-xl shadow-sm flex items-center justify-center",
+                  item.name === "Discover" ? "bg-[#f8f3e9]" : item.name === "Labs" ? "bg-[#f9e9ec]" : "bg-[#f2f2f2]",
                 )}
               >
-                <div
+                <item.icon
                   className={cn(
-                    "w-10 h-10 rounded-xl shadow-sm flex items-center justify-center",
-                    item.name === "Discover" ? "bg-[#f8f3e9]" : item.name === "Labs" ? "bg-[#f9e9ec]" : "bg-[#f2f2f2]",
+                    "w-5 h-5",
+                    item.name === "Discover"
+                      ? "text-[#c17c2e]"
+                      : item.name === "Labs"
+                        ? "text-[#e75480]"
+                        : "text-[#666666]",
                   )}
-                >
-                  <item.icon
-                    className={cn(
-                      "w-5 h-5",
-                      item.name === "Discover"
-                        ? "text-[#c17c2e]"
-                        : item.name === "Labs"
-                          ? "text-[#e75480]"
-                          : "text-[#666666]",
-                    )}
-                  />
+                />
+              </div>
+              {expanded && (
+                <div className="flex flex-col">
+                  <span className="font-medium text-[#333333]">{item.name}</span>
+                  <span className="text-xs text-[#666666]">
+                    {item.name === "Discover"
+                      ? "Your daily property news"
+                      : item.name === "Labs"
+                        ? "Experimental AI features"
+                        : "Find your perfect home"}
+                  </span>
                 </div>
-                {expanded && (
-                  <div className="flex flex-col">
-                    <span className="font-medium text-[#333333]">{item.name}</span>
-                    <span className="text-xs text-[#666666]">
-                      {item.name === "Discover"
-                        ? "Your daily property news"
-                        : item.name === "Labs"
-                          ? "Experimental AI features"
-                          : "Find your perfect home"}
-                    </span>
-                  </div>
-                )}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+              )}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
 
       {expanded && (
         <div className="p-4">
