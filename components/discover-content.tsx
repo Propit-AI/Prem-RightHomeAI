@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Play } from "lucide-react"
 import { useChat } from "@/contexts/chat-context"
 import MessageInput from "./message-input"
+import Navbar from "./navbar"
 
 export default function DiscoverContent() {
   const { startConversation } = useChat()
@@ -26,9 +27,13 @@ export default function DiscoverContent() {
   }
 
   return (
-    <div className="p-6 max-w-5xl mx-auto flex flex-col items-center mt-14 mb-36">
+    <div className="p-6 max-w-5xl mx-auto flex flex-col items-center mt-20 mb-36">
       <div className="fixed p-2 bottom-0 w-full mx-auto max-w-3xl">
         <MessageInput/>
+      </div>
+
+      <div className="absolute top-0 w-full right-0">
+        <Navbar/>
       </div>
       <h1 className="text-[26px] md:text-4xl font-semibold text-[#333333] mb-12">It's great to see you</h1>
 

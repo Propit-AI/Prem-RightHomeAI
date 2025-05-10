@@ -4,6 +4,7 @@ import ChatSuggestions from "@/components/chat-suggestions"
 import ChatInterface from "@/components/chat-interface"
 import { useChat } from "@/contexts/chat-context"
 import MessageInput from "@/components/message-input"
+import Navbar from "@/components/navbar"
 
 export default function Home() {
   const { isConversationStarted } = useChat()
@@ -23,7 +24,10 @@ export default function Home() {
   }, [isConversationStarted])
 
   return (
-    <div className="h-full w-full flex flex-col md:justify-between items-center p-6 pb-24 overflow-y-auto relative">
+    <div className="h-full w-full flex flex-col md:justify-between items-center p-6 py-20 overflow-y-auto relative">
+      <div className="absolute top-0 w-full right-0">
+        <Navbar/>
+      </div>
       {/* Mobile: Text content at top */}
       <div className="md:hidden text-xs text-[#666666] mb-6 mt-16">
         <p>
