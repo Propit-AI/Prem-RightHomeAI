@@ -29,6 +29,14 @@ export default function ChatSuggestions() {
 
   const suggestions = [
     {
+      text: "Search for properties",
+      icon: Search,
+    },
+    {
+      text: "Find homes for sale",
+      icon: Home,
+    },
+    {
       text: "Compare property prices",
       icon: DollarSign,
     },

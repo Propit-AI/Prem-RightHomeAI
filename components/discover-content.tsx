@@ -6,6 +6,7 @@ import { Play } from "lucide-react"
 import { useChat } from "@/contexts/chat-context"
 import MessageInput from "./message-input"
 import Navbar from "./navbar"
+import Logo from "./ui/logo"
 
 export default function DiscoverContent() {
   const { startConversation } = useChat()
@@ -28,7 +29,7 @@ export default function DiscoverContent() {
 
   return (
     <div className="p-6 max-w-5xl mx-auto flex flex-col items-center mt-20 mb-36">
-      <div className="fixed p-2 bottom-0 w-full mx-auto max-w-3xl">
+      <div className="fixed p-2 bottom-0 w-full mx-auto max-w-3xl z-20">
         <MessageInput/>
       </div>
 
@@ -44,8 +45,9 @@ export default function DiscoverContent() {
         >
           <div className="relative">
             <div className="p-6 pb-20 flex flex-col items-center">
-              <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-white/10">
-                <img src="/placeholder.svg?height=40&width=40" alt="RightHome Daily" className="w-10 h-10 rounded-full animate-pulse" />
+              <div className="flex items-center justify-center animate-pulse w-16 h-16 mb-4 rounded-full bg-white/10">
+                {/* <img src="/placeholder.svg?height=40&width=40" alt="RightHome Daily" className="w-10 h-10 rounded-full animate-pulse" /> */}
+                <Logo/>
               </div>
               <h2 className="text-2xl font-semibold mb-2">RightHome Daily</h2>
               <div className="flex items-center text-sm text-white/70 mb-2">

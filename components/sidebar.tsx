@@ -72,7 +72,7 @@ export default function Sidebar() {
         expanded ? "w-[324px]" : "w-0",
       )}
     >
-      <div className="p-4 flex items-center justify-between h-16 bg-[#f9f9f8] w-full">
+      <div className={`p-4 flex items-center justify-between h-16 ${expanded ? "bg-[#f9f9f8]" : "bg-transparent"} w-full`}>
             {expanded && (
             <div className="flex items-center gap-3">
               <h1 className="text-lg font-semibold">RightHomeAI</h1>

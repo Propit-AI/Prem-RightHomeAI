@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 function Navbar() {
     return (
-        <div className="w-full h-16 bg-[#f8f8f9]/80 backdrop-blur-sm flex justify-end items-center">
+        <div className="w-full fixed top-0 h-16 bg-[#f8f8f9]/80 backdrop-blur-sm flex justify-end items-center z-30">
             <Button
                 variant="outline"
                 className="rounded-xl text-md border-2 border-[#f2f2f2] bg-white text-[#666666] hover:bg-[#f2f2f2] shadow-xl mr-4"
