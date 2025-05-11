@@ -177,6 +177,8 @@ export default function LabsContent() {
                 </h1>
               </div>
             </div>
+
+            <div className="w-full h-[2px] my-6 bg-[#333333]"></div>
             <h1 className="text-sm md:text-md text-[#666666] mt-6 text-center">
               Some righthomeai features are experimental and may not work as
               expected. We are constantly improving our AI models and your
