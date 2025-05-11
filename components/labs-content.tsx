@@ -145,7 +145,7 @@ export default function LabsContent() {
                 </h1>
                 <h1 className="text-sm md:text-md text-[#666666] mt-2">
                   Stay updated with the latest features and updates from
-                  RightHome Labs
+                  RightHomeAi Labs
                 </h1>
               </div>
               <div>
@@ -154,7 +154,7 @@ export default function LabsContent() {
                   Contribute on GitHub
                 </h1>
                 <h1 className="text-sm md:text-md text-[#666666] mt-2">
-                  Join our open-source community and help us improve RightHome
+                  Join our open-source community and help us improve RightHomeAi
                   Labs
                 </h1>
               </div>
@@ -173,12 +173,12 @@ export default function LabsContent() {
                   Follow us on Twitter
                 </h1>
                 <h1 className="text-sm md:text-md text-[#666666] mt-2">
-                  Get the latest news and updates from RightHome Labs
+                  Get the latest news and updates from RightHomeAi Labs
                 </h1>
               </div>
             </div>
             <h1 className="text-sm md:text-md text-[#666666] mt-6 text-center">
-              Some righthome.ai features are experimental and may not work as
+              Some righthomeai features are experimental and may not work as
               expected. We are constantly improving our AI models and your
               feedback is valuable to us. Please report any issues or
               suggestions to our support team.
