@@ -1,20 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { DM_Sans, Inter, Outfit } from "next/font/google"
+import { Outfit } from "next/font/google"
 import "./globals.css"
 import Sidebar from "@/components/sidebar"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ChatProvider } from "@/contexts/chat-context"
-
-const inter = Inter({ subsets: ["latin"] })
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-  style: ["normal"],
-})
 
 const outfit = Outfit({
   subsets: ["latin"],

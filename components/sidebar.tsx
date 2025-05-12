@@ -2,17 +2,13 @@
 
 import { cn } from "@/lib/utils";
 import {
-  MessageSquare,
-  Grid,
   FlaskRoundIcon as Flask,
-  ChevronLeft,
-  ChevronRight,
   ChevronDown,
   Plus,
   LayoutDashboard,
   PanelLeft,
   Webhook,
-  Play,
+  SquarePen,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -27,14 +23,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const sidebarItems = [
-  // {
-  //   name: "Chat",
-  //   href: "/",
-  //   icon: MessageSquare,
-  // },
   {
     name: "Discover",
-    href: "/discover",
+    href: "/",
     icon: LayoutDashboard,
   },
   {
@@ -73,7 +64,7 @@ export default function Sidebar() {
   return (
     <div
       className={cn(
-        "h-screen bg-[#f8f8f9] shadow-md absolute md:relative flex flex-col shrink-0 transition-all duration-300 z-50",
+        "h-screen dark:bg-[#1c2b36] bg-[#f8f8f9] shadow-md absolute md:relative flex flex-col shrink-0 transition-all duration-300 z-50",
         expanded ? "w-[324px]" : "w-0"
       )}
     >
@@ -97,7 +88,7 @@ export default function Sidebar() {
           >
             <PanelLeft className="h-6 w-6" />
           </Button>
-          <Link href={"/"} className="flex items-center gap-3">
+          <Link href={"/chat"} className="flex items-center gap-3">
             <Button
               variant="ghost"
               size="icon"
@@ -108,7 +99,7 @@ export default function Sidebar() {
               }}
               className="z-10 text-[#666666] hover:bg-[#f2f2f2]"
             >
-              <Play className="h-6 w-6" />
+              <SquarePen className="h-6 w-6" />
             </Button>
           </Link>
           <DropdownMenu>
