@@ -2,14 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  Play,
-  Brain,
-  LineChart,
-  Home,
-  Map,
-  Sparkles,
-} from "lucide-react";
+import { Play, Brain, LineChart, Home, Map, Sparkles } from "lucide-react";
 import { useChat } from "@/contexts/chat-context";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -26,7 +19,7 @@ export default function DiscoverContent() {
 
   useEffect(() => {
     if (isConversationStarted) {
-      router.push('/chat');
+      router.push("/chat");
     }
   }, [isConversationStarted]);
 
@@ -126,10 +119,6 @@ export default function DiscoverContent() {
             <h1 className="text-[26px] md:text-4xl font-semibold text-[#333333]">
               Welcome to the Future of Real Estate
             </h1>
-            <p className="mt-4 text-lg text-gray-600 max-w-2xl">
-              Explore AI-powered insights, market trends, and smart property
-              recommendations
-            </p>
           </div>
 
           {/* Daily Update and Weather Section */}
@@ -140,7 +129,7 @@ export default function DiscoverContent() {
             >
               <div className="relative">
                 <div className="p-10 flex flex-col items-center">
-                  <div className="flex items-center justify-center w-24 h-24 mb-12 rounded-full bg-white/10">
+                  <div className="flex items-center justify-center w-24 h-24 mb-6 rounded-full bg-white/10">
                     <Logo />
                   </div>
                   <h2 className="text-2xl font-semibold mb-2">
@@ -155,68 +144,70 @@ export default function DiscoverContent() {
                     Mumbai property prices surge, new metro line boosts Pune
                     suburbs, affordable housing initiative in Bangalore
                   </p>
-                <Button className="bg-white mt-6 text-[#1c2b36] hover:bg-white/90 w-full rounded-full flex items-center gap-2 px-6 group-hover:shadow-lg transition-all">
-                  <Play className="h-4 w-4" />
-                  Play now
-                </Button>
+                  <Button className="bg-white mt-6 text-[#1c2b36] hover:bg-white/90 w-full rounded-full flex items-center gap-2 px-6 group-hover:shadow-lg transition-all">
+                    <Play className="h-4 w-4" />
+                    Play now
+                  </Button>
                 </div>
               </div>
             </Card>
 
             <div className="flex flex-col gap-4">
-            <Card
-              className="overflow-hidden bg-gradient-to-br from-[#daf5ff] to-[#f8fdff] border-2 border-[#d6f4fe] rounded-[4rem] shadow-md cursor-pointer transition-transform hover:scale-[1.02]"
-              onClick={handleWeatherClick}
-            >
-              <CardContent className="p-6">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-lg font-medium mb-1">New Delhi</h3>
-                    <div className="flex items-end">
-                      <span className="text-6xl font-light">35°</span>
-                      <span className="text-sm text-[#666666] ml-2 mb-2">
-                        Haze
-                      </span>
+              <Card
+                className="overflow-hidden bg-gradient-to-br from-[#daf5ff] to-[#f8fdff] border-2 border-[#d6f4fe] rounded-[4rem] shadow-md cursor-pointer transition-transform hover:scale-[1.02]"
+                onClick={handleWeatherClick}
+              >
+                <CardContent className="p-6">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="text-lg font-medium mb-1">New Delhi</h3>
+                      <div className="flex items-end">
+                        <span className="text-6xl font-light">35°</span>
+                        <span className="text-sm text-[#666666] ml-2 mb-2">
+                          Haze
+                        </span>
+                      </div>
+                      <div className="text-sm text-[#666666] mt-1">
+                        H 35° L 27°
+                      </div>
+                      <p className="mt-3 text-gray-500">
+                        Learn how weather affects property choices
+                      </p>
                     </div>
-                    <div className="text-sm text-[#666666] mt-1">
-                      H 35° L 27°
-                    </div>
-                    <p className="mt-3 text-gray-500">
-                      Learn how weather affects property choices
-                    </p>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
 
-            <Card
-              className="overflow-hidden bg-gradient-to-br from-[#f8f9fa] to-[#e9ecef] border border-[#e6e6e6] rounded-[4rem] shadow-md border-none cursor-pointer transition-transform hover:scale-[1.02]"
-              onClick={handleWeatherClick}
-            >
-              <CardContent className="p-6">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-lg font-medium mb-1">New Delhi</h3>
-                    <div className="flex items-end">
-                      <span className="text-6xl font-light">35°</span>
-                      <span className="text-sm text-[#666666] ml-2 mb-2">
-                        Haze
+              <Card
+                className="overflow-hidden bg-gradient-to-br from-[#fff0f3] to-[#ffe2e9] border border-[#ffc2d1] rounded-[4rem] shadow-md cursor-pointer transition-transform hover:scale-[1.03]"
+                onClick={handleHiddenCostClick}
+              >
+                <CardContent className="p-6">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-1 text-[#d6336c] flex items-center gap-2">
+                        💸 Hidden Costs in Home Buying
+                      </h3>
+                      <div className="text-4xl font-light text-[#d6336c] mb-1">
+                        Don’t let surprise fees catch you
+                      </div>
+                      <div className="text-sm text-[#944252] mt-1">
+                        Stamp duty, registration, legal charges — learn about
+                        all the hidden charges.
+                      </div>
+                      <span className="inline-block mt-4 px-3 py-1 text-xs font-medium bg-[#ffd6e0] text-[#7a2942] rounded-full">
+                        📑 Finance Tip
                       </span>
                     </div>
-                    <div className="text-sm text-[#666666] mt-1">
-                      H 35° L 27°
-                    </div>
-                    <p className="mt-3 text-gray-500">
-                      Learn how weather affects property choices
-                    </p>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
-          <h1 className="text-2xl md:text-4xl font-semibold text-[#333333] mt-28 mb-12">Real Estate Topics You Might Love</h1>
+          <h1 className="text-2xl md:text-4xl font-semibold text-[#333333] mt-24 mb-12">
+            Real Estate Topics You Might Love
+          </h1>
           {/* Podcasts and Investment Guide */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 w-full">
             <Card
@@ -231,48 +222,48 @@ export default function DiscoverContent() {
                   height={112}
                   className="w-full h-72 object-cover rounded-[3rem]"
                 />
-                  <h3 className="text-2xl md:text-3xl font-medium mb-1 p-4">
-                    Find Your Dream Home
-                  </h3>
+                <h3 className="text-2xl md:text-3xl font-medium mb-1 p-4">
+                  Find Your Dream Home
+                </h3>
               </CardContent>
             </Card>
 
-            <div className="flex flex-col justify-between">
-            <Card
-              className="overflow-hidden bg-white rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
-              onClick={handleBuyingGuideClick}
-            >
-              <CardContent className="p-3 flex items-end gap-4">
-                <Image
-                  src={"/images/img2.png"}
-                  alt="Investment Guide"
-                  width={112}
-                  height={112}
-                  className="md:w-40 md:h-40 w-32 h-32 object-cover rounded-[3rem]"
-                />
+            <div className="flex flex-col justify-between gap-4 md:gap-0">
+              <Card
+                className="overflow-hidden bg-white rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
+                onClick={handleBuyingGuideClick}
+              >
+                <CardContent className="p-3 flex items-end gap-4">
+                  <Image
+                    src={"/images/img2.png"}
+                    alt="Investment Guide"
+                    width={112}
+                    height={112}
+                    className="md:w-40 md:h-40 w-32 h-32 object-cover rounded-[3rem]"
+                  />
                   <h3 className="text-xl md:text-2xl p-2 font-medium mb-1">
                     Home Buying Guide
                   </h3>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
 
-            <Card
-              className="overflow-hidden bg-white rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
-              onClick={handleHiddenCostClick}
-            >
-              <CardContent className="p-3 flex items-end gap-4">
-                <Image
-                  src={"/images/img3.png"}
-                  alt="Investment Guide"
-                  width={112}
-                  height={112}
-                  className="md:w-40 md:h-40 w-32 h-32 object-cover rounded-[3rem]"
-                />
+              <Card
+                className="overflow-hidden bg-white rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
+                onClick={handleHiddenCostClick}
+              >
+                <CardContent className="p-3 flex items-end gap-4">
+                  <Image
+                    src={"/images/img3.png"}
+                    alt="Investment Guide"
+                    width={112}
+                    height={112}
+                    className="md:w-40 md:h-40 w-32 h-32 object-cover rounded-[3rem]"
+                  />
                   <h3 className="text-xl md:text-2xl p-2 font-medium mb-1">
                     Know the Hidden Costs
                   </h3>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
