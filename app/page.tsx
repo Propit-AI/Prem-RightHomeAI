@@ -128,7 +128,7 @@ export default function DiscoverContent() {
               onClick={handleDailyClick}
             >
               <div className="relative">
-                <div className="p-6 md:p-10 flex flex-col items-center">
+                <div className="p-6 md:p-8 flex flex-col items-center">
                   <div className="flex items-center justify-center w-24 h-24 mb-6 rounded-full bg-white/10">
                     <Logo />
                   </div>
@@ -144,7 +144,7 @@ export default function DiscoverContent() {
                     Mumbai property prices surge, new metro line boosts Pune
                     suburbs, affordable housing initiative in Bangalore
                   </p>
-                  <Button className="bg-white mt-6 text-[#1c2b36] hover:bg-white/90 w-full rounded-full flex items-center gap-2 px-6 py-4 group-hover:shadow-lg transition-all">
+                  <Button className="bg-white mt-6 text-[#1c2b36] hover:bg-white/90 w-full rounded-[3rem] flex items-center gap-2 px-6 py-4 group-hover:shadow-lg transition-all">
                     <Play className="h-4 w-4" />
                     Play now
                   </Button>
@@ -152,14 +152,14 @@ export default function DiscoverContent() {
               </div>
             </Card>
 
-            <div className="flex flex-col gap-4">
+            <div className="grid gap-4">
               <Card
                 className="overflow-hidden bg-gradient-to-br from-[#daf5ff] to-[#f8fdff] border-2 border-[#d6f4fe] rounded-[3rem] shadow-md cursor-pointer transition-transform hover:scale-[1.02]"
                 onClick={handleWeatherClick}
               >
                 <CardContent className="p-6">
                   <div className="flex justify-between items-start">
-                    <div>
+                    <div className="flex flex-col justify-evenly">
                       <h3 className="text-md md:text-lg font-medium mb-1">New Delhi</h3>
                       <div className="flex items-end">
                         <span className="text-4xl md:text-6xl font-light">35°</span>
