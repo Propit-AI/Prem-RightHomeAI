@@ -152,14 +152,13 @@ export default function DiscoverContent() {
               </div>
             </Card>
 
-            <div className="grid gap-4">
+            <div className="flex flex-col justify-between gap-4">
               <Card
-                className="overflow-hidden bg-gradient-to-br from-[#daf5ff] to-[#f8fdff] border-2 border-[#d6f4fe] rounded-[3rem] shadow-md cursor-pointer transition-transform hover:scale-[1.02]"
+                className="overflow-hidden flex justify-start items-center h-full bg-gradient-to-br from-[#daf5ff] to-[#f8fdff] border-2 border-[#d6f4fe] rounded-[3rem] md:rounded-[4rem] shadow-md cursor-pointer transition-transform hover:scale-[1.02]"
                 onClick={handleWeatherClick}
               >
-                <CardContent className="p-6">
-                  <div className="flex justify-between items-start">
-                    <div className="flex flex-col justify-evenly">
+                <CardContent className="p-3 pl-8">
+                  <div className="flex flex-col justify-between h-full items-start">
                       <h3 className="text-md md:text-lg font-medium mb-1">New Delhi</h3>
                       <div className="flex items-end">
                         <span className="text-4xl md:text-6xl font-light">35°</span>
@@ -170,22 +169,21 @@ export default function DiscoverContent() {
                       <div className="text-sm text-[#666666] mt-1">
                         H 35° L 27°
                       </div>
-                    </div>
                   </div>
                 </CardContent>
               </Card>
 
               <Card
-                className="overflow-hidden bg-white rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
+                className="overflow-hidden h-full bg-white rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
                 onClick={handleHiddenCostClick}
               >
-                <CardContent className="p-3 flex items-end gap-4">
+                <CardContent className="p-3 flex items-end justify-center gap-4">
                   <Image
                     src={"/images/img3.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
-                    className="md:w-40 md:h-40 w-32 h-32 object-cover rounded-[3rem]"
+                    className="md:h-40 md:w-40 w-32 h-32 object-cover rounded-[3rem]"
                   />
                   <h3 className="text-xl md:text-2xl p-2 font-medium mb-1">
                     Explore great properties
@@ -354,40 +352,6 @@ export default function DiscoverContent() {
               </div>
             </CardContent>
           </Card>
-
-          {/* AI Feature Showcase */}
-          {/* <div className="w-full mb-12 overflow-hidden rounded-[3rem] bg-[#1c2b36] text-white p-8">
-        <div className="mb-6 text-center">
-          <div className="inline-flex items-center px-4 py-1 rounded-full bg-white/10 text-sm font-medium mb-4">
-            <Cpu className="h-4 w-4 mr-2" />
-            <span>Powered by AI</span>
-          </div>
-          <h2 className="text-3xl font-bold mb-2">Intelligent Real Estate</h2>
-          <p className="text-white/70">Discover how our AI is transforming property search and investment</p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-          {aiFeatures.map((feature, index) => (
-            <div 
-              key={index} 
-              className={`p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-700 ease-in-out ${
-                index === animatedIndex ? "scale-105 bg-white/10" : ""
-              }`}
-              onClick={() => {
-                if (index === 0) handleAIValuationClick();
-                if (index === 1) handleMarketPredictionClick();
-                if (index === 2) handleVirtualTourClick();
-              }}
-            >
-              <div className="p-3 rounded-xl bg-white/10 inline-block mb-4">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-white/70">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </div> */}
 
           {/* Smart Property Assistant */}
           <Card className="overflow-hidden bg-gradient-to-br from-[#f8f9fa] to-[#e9ecef] border border-[#e6e6e6] rounded-[3rem] shadow-md border-none w-full">
