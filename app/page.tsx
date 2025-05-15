@@ -110,12 +110,12 @@ export default function DiscoverContent() {
             <MessageInput />
           </div>
 
-          {/* <div className="absolute top-0 w-full right-0">
+          <div className="absolute top-0 w-full right-0">
             <Navbar />
-          </div> */}
+          </div>
 
           {/* Hero section with futuristic greeting */}
-          <div className="relative mb-12 text-center">
+          <div className="relative mb-8 md:mb-12 text-center">
             <h1 className="text-[26px] md:text-4xl font-semibold text-[#333333]">
               Welcome to the Future of Real Estate
             </h1>
@@ -124,12 +124,12 @@ export default function DiscoverContent() {
           {/* Daily Update and Weather Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 w-full">
             <Card
-              className="overflow-hidden bg-gradient-to-b from-[#1c2b36]/90 to-[#1c2b36] border-2 border-[#131d25] backdrop-blur-sm text-white rounded-[4rem] shadow-md cursor-pointer transition-transform hover:scale-[1.02] group"
+              className="overflow-hidden bg-gradient-to-b from-[#1c2b36] to-[#1c2b36] text-white rounded-[4rem] shadow-md cursor-pointer transition-transform hover:scale-[1.02] group"
               onClick={handleDailyClick}
             >
               <div className="relative">
                 <div className="p-6 md:p-8 flex flex-col items-center">
-                  <div className="flex items-center justify-center w-24 h-24 mb-6 rounded-full bg-white/10">
+                  <div className="flex items-center justify-center w-16 h-16 md:w-24 md:h-24 mb-6 rounded-full bg-white/10">
                     <Logo />
                   </div>
                   <h2 className="text-[22px] md:text-2xl font-semibold mb-2">
@@ -177,13 +177,13 @@ export default function DiscoverContent() {
                 className="overflow-hidden h-full bg-white rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
                 onClick={handleHiddenCostClick}
               >
-                <CardContent className="p-3 flex items-end justify-center gap-4">
+                <CardContent className="p-3 h-full flex items-center md:justify-center gap-4">
                   <Image
                     src={"/images/img3.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
-                    className="md:h-40 md:w-40 w-32 h-32 object-cover rounded-[3rem]"
+                    className="md:h-40 md:w-40 w-30 h-30 object-cover rounded-[2.5rem]"
                   />
                   <h3 className="text-xl md:text-2xl p-2 font-medium mb-1">
                     Explore great properties

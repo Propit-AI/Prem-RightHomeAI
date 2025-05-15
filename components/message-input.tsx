@@ -42,7 +42,7 @@ export default function MessageInput() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Message RightHomeAI"
-            className="flex-1 border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-[#333333] text-sm md:text-base"
+            className="flex-1 border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-[#333333] text-sm md:text-base"
           />
           <div className="flex justify-between w-full">
             <div className=" flex items-center">
