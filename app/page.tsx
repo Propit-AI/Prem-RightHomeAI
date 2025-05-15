@@ -110,9 +110,9 @@ export default function DiscoverContent() {
             <MessageInput />
           </div>
 
-          <div className="absolute top-0 w-full right-0">
+          {/* <div className="absolute top-0 w-full right-0">
             <Navbar />
-          </div>
+          </div> */}
 
           {/* Hero section with futuristic greeting */}
           <div className="relative mb-12 text-center">

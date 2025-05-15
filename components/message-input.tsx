@@ -35,9 +35,9 @@ export default function MessageInput() {
   };
 
   return (
-    <div className="flex w-full md:w-3xl h-max z-40 bg-gradient-to-t to-[#f2f2f2] from-white border-2 border-white shadow-xl my-2 p-2 rounded-[2rem]">
+    <div className="flex w-full md:w-3xl h-max z-40 bg-gradient-to-t to-[#fffadd] from-white border-2 border-white shadow-xl my-2 p-2 rounded-[2rem]">
       <form onSubmit={handleSubmit} className="w-full">
-        <div className="flex flex-col items-center gap-2 bg-white rounded-[1.5rem] p-2 pl-4">
+        <div className="flex flex-col items-center gap-2 h-full bg-white/70 backdrop-blur-sm rounded-[1.5rem] p-2 pl-4">
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}

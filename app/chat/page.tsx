@@ -24,7 +24,7 @@ export default function Chat() {
     }, [isConversationStarted]);
 
     return (
-        <div className="h-full w-full flex flex-col md:justify-between items-center p-6 py-20 overflow-y-auto relative">
+        <div className="h-full w-full flex flex-col md:justify-between items-center bg-[#fdfdf3] p-6 py-20 overflow-y-auto relative">
         <div className="absolute top-0 w-full right-0">
             <Navbar/>
         </div>
