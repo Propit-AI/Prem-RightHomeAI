@@ -55,7 +55,7 @@ return (
                 <h1 className="text-2xl md:text-4xl font-bold text-start text-[#333333] mb-80 md:mb-0">
                     Hey, what's on your mind today?
                 </h1>
-                <div className="w-full max-w-3xl fixed bottom-2 md:relative mt-6">
+                <div className="w-full max-w-3xl fixed bottom-0 md:relative mt-6">
                     <div className="text-[#666666] md:hidden text-sm md:text-base">
                     <ChatSuggestions />
                     </div>
@@ -72,11 +72,11 @@ return (
         {/* Fixed MessageInput that appears at the bottom when conversation starts */}
         {isConversationStarted && (
             <div
-            className={`fixed w-full bottom-0 p-4 shadow-md transition-all duration-300 ease-in-out ${
+            className={`fixed w-full bottom-0 shadow-md transition-all duration-300 ease-in-out ${
                 showBottomInput ? "translate-y-0" : "-translate-y-full"
             }`}
             >
-            <div className="w-full max-w-3xl mx-auto">
+            <div className="w-full max-w-3xl px-4 mx-auto pt-6 pb-2 bg-gradient-to-t from-[#fffff5] to-transparent">
                 <MessageInput />
             </div>
             </div>
