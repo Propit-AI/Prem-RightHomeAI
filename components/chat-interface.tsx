@@ -14,7 +14,7 @@ export default function ChatInterface() {
   }, [messages])
 
   return (
-    <div className="w-full max-w-3xl mx-auto h-screen">
+    <div className="w-full max-w-3xl mx-auto">
       <div className="space-y-6 py-4 md:py-6">
         {messages.map((message) => (
           <MessageBubble key={message.id} message={message} />
