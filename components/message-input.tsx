@@ -80,9 +80,9 @@ export default function MessageInput() {
           />
 
           {/* 🧠 Suggestions Dropdown */}
-          {/* <div className="">
+          <div className="">
           {!hasSelectedSuggestion && suggestions.length > 0 && (
-            <ul className="absolute top-[-140px] md:top-[160px] left-4 w-[calc(100%-3rem)] md:w-[calc(100%-2rem)] bg-gradient-to-br from-[#fffadd] to-[#fffff5] border border-white rounded-xl shadow-md z-50 text-sm overflow-hidden">
+            <ul className="absolute top-[-260px] md:top-[160px] -left-1 w-[calc(100%)] md:w-[calc(100%+1rem)] bg-[#fffff5] p-3 border border-[#fffadd] rounded-[1.5rem] shadow-lg z-50 text-sm overflow-hidden">
               {suggestions.map((s, i) => (
                 <li
                   key={i}
@@ -90,14 +90,14 @@ export default function MessageInput() {
                     setInput(s);
                     setSuggestions([]);
                   }}
-                  className="px-4 py-2 cursor-pointer hover:bg-gray-100"
+                  className="px-4 py-3 font-medium text-start cursor-pointer text-[#333333] hover:bg-gray-100"
                 >
                   {s}
                 </li>
               ))}
             </ul>
           )}
-          </div> */}
+          </div>
 
           <div className="flex justify-between w-full">
             <div className=" flex items-center">

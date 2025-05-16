@@ -56,7 +56,7 @@ return (
                     Hey, what's on your mind today?
                 </h1>
                 <div className="w-full max-w-3xl fixed bottom-0 md:relative mt-6">
-                    <div className="text-[#666666] md:hidden text-sm md:text-base">
+                    <div className="text-[#666666] md:hidden text-sm md:text-base p-2">
                     <ChatSuggestions />
                     </div>
                     <MessageInput />
