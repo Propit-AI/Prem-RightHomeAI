@@ -1,7 +1,6 @@
 "use client";
 
-import type React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mic, ArrowUpFromDot, Plus } from "lucide-react";
@@ -10,6 +9,41 @@ import { useChat } from "@/contexts/chat-context";
 export default function MessageInput() {
   const [input, setInput] = useState("");
   const { addMessage, startConversation, isConversationStarted } = useChat();
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [allSuggestions, setAllSuggestions] = useState<string[]>([]);
+  const [hasSelectedSuggestion, setHasSelectedSuggestion] = useState(false);
+
+
+  // Load suggestions from JSON file (in /public folder)
+  useEffect(() => {
+    const fetchSuggestions = async () => {
+      try {
+        const res = await fetch("/data/chatSuggestions.realEstate.json");
+        const json = await res.json();
+        const flatList = Object.values(json).flat() as string[];
+        setAllSuggestions(flatList);
+      } catch (err) {
+        console.error("Error loading suggestions:", err);
+      }
+    };
+    fetchSuggestions();
+  }, []);
+
+  // Filter suggestions based on input
+  useEffect(() => {
+    const delayDebounce = setTimeout(() => {
+      if (input.length > 1) {
+        const filtered = allSuggestions.filter((s) =>
+          s.toLowerCase().includes(input.toLowerCase())
+        );
+        setSuggestions(filtered.slice(0, 5));
+      } else {
+        setSuggestions([]);
+      }
+    }, 300);
+
+    return () => clearTimeout(delayDebounce);
+  }, [input, allSuggestions]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,32 +52,53 @@ export default function MessageInput() {
     if (!isConversationStarted) {
       startConversation(input);
     } else {
-      // Add user message
       addMessage(input, "user");
 
-      // Simulate AI response
       setTimeout(() => {
         const response =
           "I understand you're interested in " +
           input +
-          ". Let me help you with that. Based on current market trends, I can suggest several options that might meet your requirements.";
+          ". Let me help you with that.";
         addMessage(response, "assistant");
       }, 1000);
     }
 
     setInput("");
+    setSuggestions([]);
+    setHasSelectedSuggestion(false);
   };
 
   return (
-    <div className="flex w-full md:w-3xl h-max z-40 bg-gradient-to-t to-[#fffadd] from-white border-2 border-white shadow-xl my-2 p-2 rounded-[2rem]">
+    <div className="flex w-full md:w-3xl h-max z-40 bg-gradient-to-t to-[#fffadd] from-white border-2 border-white shadow-xl my-2 p-2 rounded-[2rem] relative">
       <form onSubmit={handleSubmit} className="w-full">
         <div className="flex flex-col items-center gap-2 h-full bg-white/70 backdrop-blur-sm rounded-[1.5rem] p-2 pl-4">
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Message RightHomeAI"
-            className="flex-1 border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-[#333333] text-sm md:text-base"
+            className="flex-1 border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-[#333333] text-sm font-medium md:text-base"
           />
+
+          {/* 🧠 Suggestions Dropdown */}
+          {/* <div className="">
+          {!hasSelectedSuggestion && suggestions.length > 0 && (
+            <ul className="absolute top-[-140px] md:top-[160px] left-4 w-[calc(100%-3rem)] md:w-[calc(100%-2rem)] bg-gradient-to-br from-[#fffadd] to-[#fffff5] border border-white rounded-xl shadow-md z-50 text-sm overflow-hidden">
+              {suggestions.map((s, i) => (
+                <li
+                  key={i}
+                  onClick={() => {
+                    setInput(s);
+                    setSuggestions([]);
+                  }}
+                  className="px-4 py-2 cursor-pointer hover:bg-gray-100"
+                >
+                  {s}
+                </li>
+              ))}
+            </ul>
+          )}
+          </div> */}
+
           <div className="flex justify-between w-full">
             <div className=" flex items-center">
               <img
@@ -68,35 +123,34 @@ export default function MessageInput() {
                 />
               </svg>
             </div>
-            <div>
-            <Button
-              type="button"
-              size="icon"
-              variant="ghost"
-              className="rounded-full text-[#666666]"
-            >
-              <Plus className="h-5 w-5" />
-            </Button>
-            
-            {/* Show mic icon when input is empty, send icon when typing */}
-            {input.trim() ? (
-              <Button
-                type="submit"
-                size="icon"
-                className="rounded-full bg-[#333333] hover:bg-[#333333]/80 text-white"
-              >
-                <ArrowUpFromDot className="h-5 w-5" />
-              </Button>
-            ) : (
+            <div className="flex items-center gap-1">
               <Button
                 type="button"
                 size="icon"
                 variant="ghost"
                 className="rounded-full text-[#666666]"
               >
-                <Mic className="h-5 w-5" />
+                <Plus className="h-5 w-5" />
               </Button>
-            )}
+
+              {input.trim() ? (
+                <Button
+                  type="submit"
+                  size="icon"
+                  className="rounded-full bg-[#333333] hover:bg-[#333333]/80 text-white"
+                >
+                  <ArrowUpFromDot className="h-5 w-5" />
+                </Button>
+              ) : (
+                <Button
+                  type="button"
+                  size="icon"
+                  variant="ghost"
+                  className="rounded-full text-[#666666]"
+                >
+                  <Mic className="h-5 w-5" />
+                </Button>
+              )}
             </div>
           </div>
         </div>

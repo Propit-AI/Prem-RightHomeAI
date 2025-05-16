@@ -1,7 +1,7 @@
 "use client"
 
 import { useChat, type MessageType } from "@/contexts/chat-context"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import Logo from "./ui/logo"
 
 export default function ChatInterface() {
@@ -27,6 +27,27 @@ export default function ChatInterface() {
 
 function MessageBubble({ message }: { message: MessageType }) {
   const isUser = message.role === "user"
+  const [displayedText, setDisplayedText] = useState(
+    isUser ? message.content : ""
+  )
+
+  useEffect(() => {
+    if (isUser) return
+
+    let i = 0
+    const speed = 20 // milliseconds per character
+
+    const interval = setInterval(() => {
+      if (i < message.content.length) {
+        setDisplayedText((prev) => prev + message.content[i])
+        i++
+      } else {
+        clearInterval(interval)
+      }
+    }, speed)
+
+    return () => clearInterval(interval)
+  }, [message.content, isUser])
 
   return (
     <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
@@ -37,15 +58,18 @@ function MessageBubble({ message }: { message: MessageType }) {
       )}
 
       <div
-        className={`max-w-[80%] mb-10 p-3 rounded-2xl font-medium ${isUser ? "bg-gradient-to-tl from-[#333333] to-[#333333]/70 text-white" : "bg-[#777777]/10 text-[#333333]"}`}
+        className={`max-w-[80%] mb-10 px-5 py-3 rounded-[1rem] font-medium whitespace-pre-wrap ${
+          isUser
+            ? "bg-gradient-to-tl from-[#333333]/80 to-[#333333]/50 text-white"
+            : "text-[#333333]"
+        }`}
       >
-        <p className="text-xs md:text-sm">{message.content}</p>
-        <div className={`text-[10px] mt-2 ${isUser ? "text-white/80" : "text-[#333333]"}`}>
-          {message.timestamp.toLocaleTimeString([], {
-            hour: "2-digit",
-            minute: "2-digit",
-          })}
-        </div>
+        <p className="text-sm">
+          {isUser ? message.content : displayedText}
+          {!isUser && displayedText.length < message.content.length && (
+            <span className="animate-pulse">|</span> // typing cursor
+          )}
+        </p>
       </div>
 
       {isUser && (
@@ -56,3 +80,4 @@ function MessageBubble({ message }: { message: MessageType }) {
     </div>
   )
 }
+

@@ -76,7 +76,7 @@ return (
                 showBottomInput ? "translate-y-0" : "-translate-y-full"
             }`}
             >
-            <div className="w-full max-w-3xl px-4 mx-auto pt-6 pb-2 bg-gradient-to-t from-[#fffff5] to-transparent">
+            <div className="w-full max-w-3xl px-4 mx-auto pt-6 pb-2 bg-gradient-to-t from-[#fffff5] via-[#fffff5]/70 to-transparent">
                 <MessageInput />
             </div>
             </div>
