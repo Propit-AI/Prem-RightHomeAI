@@ -5,22 +5,22 @@ import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export default function LabsContent() {
   return (
-    <div className="p-6 pt-28">
+    <div className="p-3 pt-28">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-center mb-6">
-          <div className="bg-[#2d2a3c] text-white px-6 py-3 rounded-[3rem] shadow-md">
+          <div className="bg-[#333333] text-white px-6 py-3 rounded-[3rem] shadow-md">
             <h2 className="text-xl font-bold tracking-wide">
               RightHome<span className="font-normal">Labs</span>
             </h2>
           </div>
         </div>
 
-        <h1 className="text-[26px] md:text-4xl font-semibold text-center text-[#333333] mb-12">
+        <h1 className="text-[26px] md:text-4xl font-bold text-center text-[#333333] mb-12">
           RightHome Labs features are experimental AI initiatives
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <div className="bg-white shadow-md p-2 rounded-[3rem]">
+          <div className="bg-[#fffff5] shadow-md p-2 rounded-[3rem]">
             <div className="aspect-video rounded-[3rem] bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center relative cursor-pointer">
               {/* <img
                 src=""
@@ -54,7 +54,7 @@ export default function LabsContent() {
             </div>
           </div>
 
-          <div className="bg-white shadow-md p-2 rounded-[3rem]">
+          <div className="bg-[#fffff5] shadow-md p-2 rounded-[3rem]">
             <div className="aspect-video rounded-[2.8rem] bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center relative cursor-pointer">
               {/* <img
                 src="https://images.unsplash.com/photo-1736818691455-3a24166330fe?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -91,7 +91,7 @@ export default function LabsContent() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white shadow-md p-2 rounded-[3rem]">
+          <div className="bg-[#fffff5] shadow-md p-2 rounded-[3rem]">
             <div className="aspect-video rounded-[3rem] bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative cursor-pointer">
               {/* <img
                 src="https://images.unsplash.com/photo-1652512455891-11933272bc1f?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -124,7 +124,7 @@ export default function LabsContent() {
               </Button>
             </div>
           </div>
-          <div className="bg-white shadow-md p-2 rounded-[3rem]">
+          <div className="bg-[#fffff5] shadow-md p-2 rounded-[3rem]">
             <div className="aspect-video rounded-[3rem] bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center relative cursor-pointer">
               {/* <img
                 src="https://images.unsplash.com/photo-1718157582118-f04597eaae56?q=80&w=1167&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -160,9 +160,9 @@ export default function LabsContent() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button className="bg-[#333333] rounded-[3rem] shadow-md hover:bg-[#444444] text-white px-8">
+          <button className="bg-[#333333] rounded-[1.5rem] font-medium shadow-md hover:bg-[#444444] text-white px-8 py-4">
             Try all experimental features
-          </Button>
+          </button>
         </div>
 
         <div className="mt-12 text-center">

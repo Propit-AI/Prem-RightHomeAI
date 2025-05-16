@@ -2,6 +2,7 @@
 
 import { useChat, type MessageType } from "@/contexts/chat-context"
 import { useEffect, useRef } from "react"
+import Logo from "./ui/logo"
 
 export default function ChatInterface() {
   const { messages } = useChat()
@@ -13,8 +14,8 @@ export default function ChatInterface() {
   }, [messages])
 
   return (
-    <div className="w-full max-w-3xl mt-16 mx-auto h-full">
-      <div className="space-y-6">
+    <div className="w-full max-w-3xl mx-auto h-full">
+      <div className="space-y-6 max-h-[calc(100vh-200px)] overflow-y-auto px-4 py-6">
         {messages.map((message) => (
           <MessageBubble key={message.id} message={message} />
         ))}
@@ -30,16 +31,16 @@ function MessageBubble({ message }: { message: MessageType }) {
   return (
     <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
       {!isUser && (
-        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mr-3 mt-1">
-          <span className="text-white font-bold text-xs">R</span>
+        <div className="w-8 h-8 rounded-full animate-pulse shadow-md bg-gradient-to-tl from-[#333333] to-[#333333]/70 flex items-center justify-center mr-3 mt-1">
+          <span className="w-4 h-4 rounded-full animate-pulse bg-[#fffff5]"></span>
         </div>
       )}
 
       <div
-        className={`max-w-[80%] mb-10 p-4 rounded-2xl ${isUser ? "bg-[#0078d4] text-white" : "bg-[#f2f2f2] text-[#333333]"}`}
+        className={`max-w-[80%] mb-10 p-3 rounded-2xl font-medium ${isUser ? "bg-gradient-to-tl from-[#333333] to-[#333333]/70 text-white" : "bg-[#777777]/10 text-[#333333]"}`}
       >
-        <p className="text-sm">{message.content}</p>
-        <div className={`text-xs mt-2 ${isUser ? "text-white/70" : "text-[#666666]"}`}>
+        <p className="text-xs md:text-sm">{message.content}</p>
+        <div className={`text-[10px] mt-2 ${isUser ? "text-white/80" : "text-[#333333]"}`}>
           {message.timestamp.toLocaleTimeString([], {
             hour: "2-digit",
             minute: "2-digit",
@@ -48,8 +49,8 @@ function MessageBubble({ message }: { message: MessageType }) {
       </div>
 
       {isUser && (
-        <div className="w-8 h-8 rounded-full bg-[#f2f2f2] flex items-center justify-center ml-3 mt-1">
-          <span className="text-[#666666] font-medium text-xs">You</span>
+        <div className="w-8 h-8 rounded-full bg-[#fffff5] shadow-md flex items-center justify-center ml-3 mt-1">
+          <span className="text-[#333333] font-medium text-xs">You</span>
         </div>
       )}
     </div>
