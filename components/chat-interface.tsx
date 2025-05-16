@@ -52,13 +52,13 @@ function MessageBubble({ message }: { message: MessageType }) {
   return (
     <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
       {!isUser && (
-        <div className="w-8 h-8 rounded-full animate-pulse shadow-md bg-gradient-to-tl from-[#333333] to-[#333333]/70 flex items-center justify-center mr-3 mt-1">
-          <span className="w-4 h-4 rounded-full animate-pulse bg-[#fffff5]"></span>
+        <div className="w-5 h-5 rounded-full animate-pulse shadow-md bg-gradient-to-tl from-[#333333] to-[#333333]/70 flex items-center justify-center mr-3 mt-3">
+          <span className="w-2 h-2 rounded-full animate-pulse bg-[#fffff5]"></span>
         </div>
       )}
 
       <div
-        className={`max-w-[80%] mb-10 px-5 py-3 rounded-[1rem] font-medium whitespace-pre-wrap ${
+        className={`max-w-[80%] mb-10 p-3 rounded-[1rem] font-medium whitespace-pre-wrap ${
           isUser
             ? "bg-gradient-to-tl from-[#333333]/80 to-[#333333]/50 text-white"
             : "text-[#333333]"
@@ -71,12 +71,6 @@ function MessageBubble({ message }: { message: MessageType }) {
           )}
         </p>
       </div>
-
-      {isUser && (
-        <div className="w-8 h-8 rounded-full bg-[#fffff5] shadow-md flex items-center justify-center ml-3 mt-1">
-          <span className="text-[#333333] font-medium text-xs">You</span>
-        </div>
-      )}
     </div>
   )
 }
