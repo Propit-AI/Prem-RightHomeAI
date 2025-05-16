@@ -55,7 +55,7 @@ return (
                 <h1 className="text-2xl md:text-4xl font-bold text-start text-[#333333] mb-80 md:mb-0">
                     Hey, what's on your mind today?
                 </h1>
-                <div className="w-full max-w-3xl absolute bottom-2 md:relative mt-6">
+                <div className="w-full max-w-3xl fixed bottom-2 md:relative mt-6">
                     <div className="text-[#666666] md:hidden text-sm md:text-base">
                     <ChatSuggestions />
                     </div>

@@ -159,15 +159,15 @@ export default function DiscoverContent() {
                 onClick={handleBuyingGuideClick}
               >
                 <CardContent className="p-3 flex flex-col gap-4">
-                  <div className="md:w-40 md:h-40 w-32 h-32 p-6 flex flex-col justify-between">
-                    <h1 className="text-xl font-medium">New Delhi</h1>
+                  <div className="md:w-40 md:h-40 w-32 h-32 md:p-6 p-3 flex flex-col justify-between">
+                    <h1 className="text-lg md:text-xl font-semibold">New Delhi</h1>
                     <div className="flex items-end">
                         <span className="text-3xl md:text-5xl font-medium">35°</span>
                         <span className="text-sm text-[#666666] ml-2 mb-2 font-medium">
                             Haze
                         </span>
                     </div>
-                    <div className="text-sm text-[#666666] mt-1 font-medium">
+                    <div className="text-xs md:text-sm text-[#666666] mt-1 font-medium">
                         H 35° L 27°
                       </div>
                   </div>
