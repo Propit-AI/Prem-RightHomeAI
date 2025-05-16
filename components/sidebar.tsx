@@ -69,7 +69,7 @@ export default function Sidebar() {
           </div>
         )}
 
-        <div className="flex items-center">
+        <div className="flex items-center bg-[#fffff5]/70 backdrop-blur-sm p-1 rounded-[1rem]">
           <Button
             variant="ghost"
             size="icon"
@@ -102,7 +102,7 @@ export default function Sidebar() {
                 <ChevronDown className="h-6 w-6 text-[#666666]" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="end" className="bg-[#fffff5]">
               <DropdownMenuItem
                 onClick={() => {
                   if (!isDesktop) {
@@ -112,11 +112,11 @@ export default function Sidebar() {
                 }}
               >
                 <Plus className="mr-2 h-4 w-4" />
-                <span>New conversation</span>
+                <span className="text-[#333333] font-medium">New conversation</span>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <LayoutDashboard className="mr-2 h-4 w-4" />
-                <span>New page</span>
+                <span className="text-[#333333] font-medium">New page</span>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

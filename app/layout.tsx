@@ -28,7 +28,6 @@ export const metadata: Metadata = {
   title: "RightHomeAI - Real Estate Assistant",
   description:
     "AI-powered real estate assistant to help you find your perfect home",
-  generator: "v0.dev",
 };
 
 export default function RootLayout({

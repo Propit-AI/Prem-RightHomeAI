@@ -74,7 +74,7 @@ export default function ChatSuggestions() {
           <Button
             key={index}
             variant="outline"
-            className="flex items-center justify-start border-muted shadow-md text-xs gap-2 h-auto py-3 px-4 rounded-2xl bg-[#f8f8f9] hover:bg-[#f2f2f2] text-[#333333] min-w-[220px] flex-shrink-0 snap-center"
+            className="flex items-center justify-start border-muted shadow-md font-medium text-xs gap-2 h-auto py-3 px-4 rounded-2xl bg-[#fffff5] hover:bg-[#f2f2f2] text-[#333333] w-max flex-shrink-0 snap-center"
             onClick={() => startConversation(suggestion.text)}
           >
             <suggestion.icon className="h-4 w-4 text-[#b7b7b7]" />
