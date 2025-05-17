@@ -69,9 +69,9 @@ export default function MessageInput() {
   };
 
   return (
-    <div className="flex w-full md:w-3xl h-max z-40 bg-gradient-to-t to-[#fffadd] from-white border-2 border-white shadow-xl my-2 p-2 rounded-[2rem] relative">
+    <div className="flex w-full md:w-3xl z-40 bg-gradient-to-t to-[#fffadd] from-white border-2 border-white shadow-xl my-2 p-[6px] md:p-[8px] rounded-[2rem] relative">
       <form onSubmit={handleSubmit} className="w-full">
-        <div className="flex flex-col items-center gap-2 h-full bg-white/70 backdrop-blur-sm rounded-[1.5rem] p-2 pl-4">
+        <div className="flex flex-col justify-center items-center bg-white/70 backdrop-blur-sm rounded-[1.5rem] p-[6px] md:p-[8px] pl-2">
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -82,7 +82,7 @@ export default function MessageInput() {
           {/* 🧠 Suggestions Dropdown */}
           <div className="">
           {!hasSelectedSuggestion && suggestions.length > 0 && (
-            <ul className="absolute top-[-260px] md:top-[160px] -left-1 w-[calc(100%)] md:w-[calc(100%+1rem)] bg-[#fffff5] p-3 border border-[#fffadd] rounded-[1.5rem] shadow-lg z-50 text-sm overflow-hidden">
+            <ul className="absolute top-[-220px] md:top-[160px] -left-1 w-[calc(100%)] md:w-[calc(100%+1rem)] bg-[#fffff5] p-3 border border-[#fffadd] rounded-[1.5rem] shadow-lg z-50 text-sm overflow-hidden">
               {suggestions.map((s, i) => (
                 <li
                   key={i}
@@ -90,7 +90,7 @@ export default function MessageInput() {
                     setInput(s);
                     setSuggestions([]);
                   }}
-                  className="px-4 py-3 font-medium text-start cursor-pointer text-[#333333] hover:bg-gray-100"
+                  className="px-4 py-2 md:py-3 font-medium text-start cursor-pointer text-[#333333] hover:bg-gray-100"
                 >
                   {s}
                 </li>
@@ -106,10 +106,10 @@ export default function MessageInput() {
                 alt="RightHomeAI"
                 className="w-6 h-6 rounded-full mr-2"
               />
-              <span className="text-sm font-medium mr-2">Quick response</span>
+              <span className="text-sm font-medium text-[#333333] mr-2">Quick response</span>
               <svg
-                width="16"
-                height="16"
+                width="18"
+                height="18"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ export default function MessageInput() {
                 type="button"
                 size="icon"
                 variant="ghost"
-                className="rounded-full text-[#666666]"
+                className="rounded-full text-[#777777]"
               >
                 <Plus className="h-5 w-5" />
               </Button>

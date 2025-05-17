@@ -1,30 +1,30 @@
 {
     "property_search": [
-        "Show me properties in [Location]",
+        "Show me properties in Gurgaon",
         "Find a 2BHK in Gurgaon under ₹50 lakhs",
         "I want to buy a flat in Noida",
-        "Search for villas in [City]",
-        "Looking for affordable apartments near [Area]",
-        "Show new launch projects in [City]",
-        "Find ready-to-move homes in [Location]",
-        "Show resale properties in [City]",
-        "List properties by owner in [Area]"
+        "Search for villas in New Delhi",
+        "Looking for affordable apartments near Delhi",
+        "Show new launch projects in Gurgaon",
+        "Find ready-to-move homes in Noida",
+        "Show resale properties in Gurgaon",
+        "List properties by owner in New Delhi"
     ],
     "property_type": [
-        "Find 1BHK in [Location]",
+        "Find 1BHK in Noida",
         "Looking for 3BHK apartments",
-        "Studio apartment for sale in [Area]",
+        "Studio apartment for sale in South Delhi",
         "Show duplex homes under ₹1 crore",
-        "Any penthouses available in [City]?",
-        "Low-rise builder floors in [Locality]",
-        "Show independent houses in [City]",
-        "Find serviced apartments in [Location]"
+        "Any penthouses available in Gurgaon?",
+        "Low-rise builder floors in Sohna Road",
+        "Show independent houses in Noida",
+        "Find serviced apartments in New Delhi"
     ],
     "budget": [
         "Homes under ₹40 lakhs",
         "Budget between ₹50L to ₹70L",
         "Luxury flats above ₹1 crore",
-        "Cheap properties in [Location]",
+        "Cheap properties in Guragon",
         "EMI-friendly homes under ₹25K/month",
         "Show properties with zero down payment",
         "Find homes with flexible payment plans"
@@ -33,10 +33,10 @@
         "Flats near metro station in Delhi",
         "Property in Sector 62 Noida",
         "Homes near schools in Gurgaon",
-        "Safe locality to buy home in [City]",
-        "Best residential area in [City]",
-        "Properties close to hospitals in [Area]",
-        "Show homes near IT parks in [Location]"
+        "Safe locality to buy home in West Delhi",
+        "Best residential area in Noida",
+        "Properties close to hospitals in Delhi",
+        "Show homes near IT parks in Gurgaon"
     ],
     "site_visit": [
         "Schedule a site visit",
@@ -52,7 +52,8 @@
         "Check loan eligibility",
         "What documents are required to buy a home?",
         "Is this RERA approved?",
-        "What is the stamp duty in [Location]?",
+        "What is the stamp duty in Delhi?",
+        "What is the registration fee?",
         "Explain the registration process"
     ],
     "agent_support": [
@@ -67,7 +68,8 @@
         "I have ₹70L budget and want 3BHK near metro",
         "Suggest best investment property in Noida",
         "Which area is good for families in Delhi?",
-        "What’s the resale value in [Area]?",
+        "What’s the resale value in 5 years?",
+        "Find properties with high rental yield",
         "Any upcoming projects with offers?",
         "Show properties with high rental yield",
         "Which localities are appreciating fastest?"
@@ -76,10 +78,12 @@
         "Flats with swimming pool",
         "Properties with parking",
         "Homes with garden or balcony",
-        "Gated society in [Area]",
+        "Gated society in Gurgaon",
+        "Properties with gym",
         "East-facing apartments",
         "Homes with power backup",
-        "Pet-friendly apartments in [Location]"
+        "Pet-friendly apartments in Delhi",
+        "Properties with modular kitchen"
     ],
     "actions_misc": [
         "Show me recently added listings",
