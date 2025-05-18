@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useSidebar } from "@/contexts/sidebar-context";
+import Logo from "./ui/logo";
 
 const sidebarItems = [
   {
@@ -65,7 +66,8 @@ export default function Sidebar() {
       >
         {isOpen && (
           <div className="flex items-center gap-3">
-            <h1 className="text-lg font-bold text-[#333333]">RightHomeAI</h1>
+            <Logo/>
+            <h1 className="text-md font-bold text-[#333333] font-segoe">RightHomeAI</h1>
           </div>
         )}
 
@@ -195,7 +197,13 @@ export default function Sidebar() {
             Conversations with RightHomeAI will be shown here. Sign in to keep
             your conversations.
           </p>
-          <Button className="w-full rounded-2xl bg-[#333333] hover:bg-[#444444] text-white text-md">
+          <Button
+            onClick={() => {
+              // Replace the following line with your actual sign-in logic or redirect
+              window.location.href = "/login";
+            }}
+            className="w-full rounded-2xl bg-[#333333] hover:bg-[#444444] text-white text-md"
+          >
             Sign in
           </Button>
         </div>

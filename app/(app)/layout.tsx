@@ -1,20 +1,12 @@
 import type React from "react";
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Outfit } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Sidebar from "@/components/sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ChatProvider } from "@/contexts/chat-context";
 import { SidebarProvider } from "@/contexts/sidebar-context";
 import Main from "@/components/main";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-  style: ["normal"],
-});
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -37,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${bricolage.variable} antialiased`}>
+      <body className={`${bricolage.variable} antialiased`}>
         <ThemeProvider defaultTheme="light" storageKey="righthome-theme">
           <ChatProvider>
             <SidebarProvider>

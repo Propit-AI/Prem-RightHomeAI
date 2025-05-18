@@ -96,27 +96,28 @@ export default function DiscoverContent() {
   };
 
   return (
-    <div className="h-full overflow-auto pb-24">
+    <div className="h-full w-full overflow-auto pb-24">
+          <div className="absolute top-4 w-full flex justify-end">
+            <Navbar />
+          </div>
       {!isConversationStarted && (
-        <div className="p-6 max-w-4xl mx-auto flex flex-col items-center mt-16 mb-28 relative">
+        <div className="p-6 max-w-4xl w-full mx-auto flex flex-col items-center mt-20 mb-28 relative">
           {/* Futuristic background elements */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
             <div className="absolute top-1/4 -left-20 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
             <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
             <div className="absolute top-1/2 left-1/3 w-40 h-40 bg-teal-500/5 rounded-full blur-2xl"></div>
           </div>
+          
 
           <div className="fixed p-2 bottom-0 w-full mx-auto max-w-3xl z-20">
             <MessageInput />
           </div>
 
-          <div className="absolute top-0 w-full right-0">
-            <Navbar />
-          </div>
 
           {/* Hero section with futuristic greeting */}
-          <div className="relative mb-8 md:mb-12 text-center">
-            <h1 className="text-[26px] md:text-4xl font-bold text-[#333333]">
+          <div className="relative mb-8 md:mb-12 text-center font-copilot">
+            <h1 className="font-segoe text-[26px] md:text-4xl font-bold text-[#333333]">
               Future of Real Estate, Unlocked.
             </h1>
           </div>
@@ -129,8 +130,10 @@ export default function DiscoverContent() {
               <CardContent className="p-3 flex flex-col items-center gap-4">
                 <div className="relative">
                 <div className="p-6 md:p-8 flex flex-col items-center">
-                  <div className="flex items-center justify-center w-16 h-16 md:w-24 md:h-24 mb-6 rounded-full bg-white/10">
-                    <Logo />
+                  <div className="flex items-center justify-center w-16 h-16 md:w-24 md:h-24 mb-6 rounded-full bg-white/20 animate-pulse">
+                    <div className="bg-white/30 w-10 h-10 md:w-16 md:h-16 rounded-full flex items-center justify-center animate-pulse">
+                      <div className="bg-white/40 w-6 h-6 md:w-10 md:h-10 rounded-full animate-pulse"></div>
+                    </div>
                   </div>
                   <h2 className="text-[22px] md:text-2xl text-white font-semibold mb-2">
                     RightHome Daily
@@ -160,7 +163,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 flex flex-col gap-4">
                   <div className="md:w-40 md:h-40 w-32 h-32 md:p-6 p-3 flex flex-col justify-between">
-                    <h1 className="text-lg md:text-xl font-semibold">New Delhi</h1>
+                    <h1 className="text-sm md:text-md font-bold">New Delhi</h1>
                     <div className="flex items-end">
                         <span className="text-3xl md:text-5xl font-medium">35°</span>
                         <span className="text-sm text-[#666666] ml-2 mb-2 font-medium">
