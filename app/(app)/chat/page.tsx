@@ -24,7 +24,7 @@ export default function Chat() {
     }, [isConversationStarted]);
 
 return (
-    <div className="h-screen w-full flex flex-col md:justify-between items-center bg-[#fffff5] p-6 py-20 overflow-y-auto relative">
+    <div className="h-screen transition-opacity duration-500 ease-in-out w-full flex flex-col md:justify-between items-center bg-[#fffff5] md:p-6 py-20 overflow-y-auto relative">
         <div className="absolute w-screen h-screen top-0 right-0">
             <Navbar />
         </div>
@@ -51,11 +51,11 @@ return (
             <ChatInterface />
             ) : (
             <>
-                <div className="max-w-3xl w-full text-center gap-12 flex flex-col items-center">
-                <h1 className="text-2xl md:text-4xl font-bold text-start text-[#333333] mb-80 md:mb-0">
+                <div className="max-w-3xl w-full gap-12 flex flex-col">
+                <h1 className="text-2xl md:text-4xl ml-6 font-medium text-start text-[#333333] mb-80 md:mb-0">
                     Hey, what's on your mind today?
                 </h1>
-                <div className="w-full max-w-3xl fixed bottom-0 md:relative mt-6">
+                <div className="w-full max-w-3xl fixed bottom-0 md:relative transform-translate-y-0">
                     <div className="text-[#666666] md:hidden text-sm md:text-base p-2">
                     <ChatSuggestions />
                     </div>
@@ -76,7 +76,7 @@ return (
                 showBottomInput ? "translate-y-0" : "-translate-y-full"
             }`}
             >
-            <div className="w-full max-w-3xl px-4 mx-auto pt-6 pb-2 bg-gradient-to-t from-[#fffff5] via-[#fffff5]/70 to-transparent">
+            <div className="w-full max-w-3xl px-4 mx-auto pt-6 pb-2 bg-gradient-to-t from-[#fffff5] via-[#fffff5]/70 to-transparent transition-all transform">
                 <MessageInput />
             </div>
             </div>

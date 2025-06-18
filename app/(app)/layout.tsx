@@ -1,6 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Outfit } from "next/font/google";
+import { Bricolage_Grotesque, Outfit, Oxygen } from "next/font/google";
 import "../globals.css";
 import Sidebar from "@/components/sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -8,13 +8,19 @@ import { ChatProvider } from "@/contexts/chat-context";
 import { SidebarProvider } from "@/contexts/sidebar-context";
 import Main from "@/components/main";
 
-const bricolage = Bricolage_Grotesque({
+// const bricolage = Bricolage_Grotesque({
+//   subsets: ["latin"],
+//   variable: "--font-bricolage",
+//   display: "swap",
+//   weight: ["400", "500", "600", "700"],
+//   style: ["normal"],
+// });
+
+const oxygen = Oxygen({
   subsets: ["latin"],
-  variable: "--font-bricolage",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-  style: ["normal"],
-});
+  variable: "--font-oxygen",
+  weight: ["400", "700"]
+})
 
 export const metadata: Metadata = {
   title: "RightHomeAI - Real Estate Assistant",
@@ -29,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bricolage.variable} antialiased`}>
+      <body className={`${oxygen.variable} antialiased`}>
         <ThemeProvider defaultTheme="light" storageKey="righthome-theme">
           <ChatProvider>
             <SidebarProvider>

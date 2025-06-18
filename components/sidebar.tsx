@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import {
+  BrickWall,
   ChevronDown,
   LayoutDashboard,
   PanelLeft,
@@ -12,7 +13,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useChat } from "@/contexts/chat-context";
 import {
   DropdownMenu,
@@ -35,6 +36,11 @@ const sidebarItems = [
     href: "/labs",
     icon: Webhook,
   },
+  {
+    name: "Properties",
+    href: "/properties",
+    icon: BrickWall,
+  }
 ];
 
 export default function Sidebar() {
@@ -154,7 +160,10 @@ export default function Sidebar() {
                       ? "bg-[#fff6e3]"
                       : item.name === "Labs"
                       ? "bg-[#ffd8e0]"
-                      : "bg-[#f2e1e1]"
+                      : "bg-[#f2e1e1]",
+                      item.name === "Properties"
+                      ? "bg-[#e3f2ff]"
+                      : "bg-[#e3ffe3]"
                   )}
                 >
                   <item.icon
@@ -164,7 +173,7 @@ export default function Sidebar() {
                         ? "text-[#c17c2e]"
                         : item.name === "Labs"
                         ? "text-[#e75480]"
-                        : "text-[#666666]"
+                        : "text-[#1b9435]"
                     )}
                   />
                 </div>

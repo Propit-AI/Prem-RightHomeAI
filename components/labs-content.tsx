@@ -15,7 +15,7 @@ export default function LabsContent() {
           </div>
         </div>
 
-        <h1 className="text-[26px] md:text-4xl font-bold text-center text-[#333333] mb-12">
+        <h1 className="text-[26px] md:text-4xl font-medium text-center text-[#333333] mb-12">
           RightHome Labs features are experimental AI initiatives
         </h1>
 

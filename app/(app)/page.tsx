@@ -117,7 +117,7 @@ export default function DiscoverContent() {
 
           {/* Hero section with futuristic greeting */}
           <div className="relative mb-8 md:mb-12 text-center font-copilot">
-            <h1 className="font-segoe text-[26px] md:text-4xl font-bold text-[#333333]">
+            <h1 className="font-segoe text-[26px] md:text-4xl font-medium text-[#333333]">
               Future of Real Estate, Unlocked.
             </h1>
           </div>
@@ -197,7 +197,7 @@ export default function DiscoverContent() {
             </div>
           </div>
 
-          <h1 className="text-2xl md:text-4xl text-center font-bold text-[#333333] mt-16 md:mt-24 mb-12">
+          <h1 className="text-2xl md:text-4xl text-center font-medium text-[#333333] mt-16 md:mt-24 mb-12">
             Real Estate Topics You Might Love
           </h1>
           {/* Podcasts and Investment Guide */}
@@ -259,7 +259,7 @@ export default function DiscoverContent() {
             </div>
           </div>
 
-          <h1 className="text-2xl md:text-4xl text-center font-bold text-[#333333] mt-16 md:mt-24 mb-12">
+          <h1 className="text-2xl md:text-4xl text-center font-medium text-[#333333] mt-16 md:mt-24 mb-12">
             Real Estate Topics Smart Investors Explore
           </h1>
 
@@ -389,7 +389,7 @@ export default function DiscoverContent() {
           </Card>
 
           <div>
-            <h1 className="text-[16px] md:text-[25px] text-center text-[#777777] font-medium mt-20">
+            <h1 className="text-[16px] md:text-[20px] text-center text-[#777777] font-medium mt-20">
               RightHomeAI may make mistakes.
             </h1>
           </div>

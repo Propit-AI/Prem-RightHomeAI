@@ -84,7 +84,7 @@ export default function ChatSuggestions() {
       </div>
       
       {/* Desktop grid */}
-      <div className={`hidden md:grid gap-3 ${columns === 3 ? 'xl:grid-cols-3 md:grid-cols-2' : 'md:grid-cols-2'}`}>
+      <div className={`hidden md:grid gap-3 grid-cols-3`}>
         {suggestions.map((suggestion, index) => (
           <Button
             key={index}

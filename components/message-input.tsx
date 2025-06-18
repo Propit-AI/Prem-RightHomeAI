@@ -3,33 +3,61 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Mic, ArrowUpFromDot, Plus } from "lucide-react";
+import { Mic, ArrowUpFromDot, Plus, ChevronDown } from "lucide-react";
 import { useChat } from "@/contexts/chat-context";
+import { useRouter } from "next/navigation";
+import Logo from "./ui/logo";
 
 export default function MessageInput() {
   const [input, setInput] = useState("");
-  const { addMessage, startConversation, isConversationStarted } = useChat();
+  const { addMessage, startConversation, isConversationStarted, isLoading } = useChat();
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [allSuggestions, setAllSuggestions] = useState<string[]>([]);
   const [hasSelectedSuggestion, setHasSelectedSuggestion] = useState(false);
 
+  const router = useRouter();
 
-  // Load suggestions from JSON file (in /public folder)
+  const handleInputFocus = () => {
+    router.push("/chat");
+  };
+
   useEffect(() => {
     const fetchSuggestions = async () => {
       try {
         const res = await fetch("/data/chatSuggestions.realEstate.json");
-        const json = await res.json();
-        const flatList = Object.values(json).flat() as string[];
-        setAllSuggestions(flatList);
+        if (res.ok) {
+          const json = await res.json();
+          const flatList = Object.values(json).flat() as string[];
+          setAllSuggestions(flatList);
+        } else {
+          // Fallback suggestions if file doesn't exist
+          const defaultSuggestions = [
+            "Show me 2BHK apartments in Delhi under 80 lakhs",
+            "What are the best family neighborhoods in Bangalore?",
+            "Compare property prices in Mumbai vs Delhi",
+            "Find villas in Gurgaon with 3+ bedrooms",
+            "Show luxury apartments in Noida",
+            "What's the average price per sq ft in Pune?",
+            "Find builder floor options in Delhi NCR",
+            "Show me properties near metro stations"
+          ];
+          setAllSuggestions(defaultSuggestions);
+        }
       } catch (err) {
         console.error("Error loading suggestions:", err);
+        // Fallback suggestions
+        const defaultSuggestions = [
+          "Show me 2BHK apartments in Delhi under 80 lakhs",
+          "What are the best family neighborhoods in Bangalore?",
+          "Compare property prices in Mumbai vs Delhi",
+          "Find villas in Gurgaon with 3+ bedrooms"
+        ];
+        setAllSuggestions(defaultSuggestions);
       }
     };
     fetchSuggestions();
   }, []);
 
-  // Filter suggestions based on input
   useEffect(() => {
     const delayDebounce = setTimeout(() => {
       if (input.length > 1) {
@@ -45,83 +73,61 @@ export default function MessageInput() {
     return () => clearTimeout(delayDebounce);
   }, [input, allSuggestions]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim()) return;
+    if (!input.trim() || isLoading) return;
 
-    if (!isConversationStarted) {
-      startConversation(input);
-    } else {
-      addMessage(input, "user");
-
-      setTimeout(() => {
-        const response =
-          "I understand you're interested in " +
-          input +
-          ". Let me help you with that.";
-        addMessage(response, "assistant");
-      }, 1000);
-    }
-
+    const message = input.trim();
     setInput("");
     setSuggestions([]);
     setHasSelectedSuggestion(false);
+
+    if (!isConversationStarted) {
+      startConversation(message);
+    } else {
+      await addMessage(message, "user");
+    }
   };
 
   return (
     <div className="flex w-full md:w-3xl z-40 bg-gradient-to-t to-[#fffadd] from-white border-2 border-white shadow-xl my-2 p-[6px] md:p-[8px] rounded-[2rem] relative">
       <form onSubmit={handleSubmit} className="w-full">
-        <div className="flex flex-col justify-center items-center bg-white/70 backdrop-blur-sm rounded-[1.5rem] p-[6px] md:p-[8px] pl-2">
+        <div className="flex flex-col justify-center gap-2 items-center bg-white/70 backdrop-blur-sm rounded-[1.5rem] px-[6px] md:px-[8px] pl-2">
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            // onFocus={handleInputFocus}
             placeholder="Message RightHomeAI"
+            disabled={isLoading}
             className="flex-1 border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-[#333333] text-sm font-medium md:text-base"
           />
 
-          {/* 🧠 Suggestions Dropdown */}
-          <div className="">
+          {/* Suggestions */}
           {!hasSelectedSuggestion && suggestions.length > 0 && (
-            <ul className="absolute top-[-220px] md:top-[160px] -left-1 w-[calc(100%)] md:w-[calc(100%+1rem)] bg-[#fffff5] p-3 border border-[#fffadd] rounded-[1.5rem] shadow-lg z-50 text-sm overflow-hidden">
+            <ul className="absolute bottom-[100%] left-0 w-full bg-white border border-[#fffadd] rounded-[1.5rem] shadow-lg z-50 text-sm overflow-hidden">
               {suggestions.map((s, i) => (
                 <li
                   key={i}
                   onClick={() => {
                     setInput(s);
                     setSuggestions([]);
+                    setHasSelectedSuggestion(true);
                   }}
-                  className="px-4 py-2 md:py-3 font-medium text-start cursor-pointer text-[#333333] hover:bg-gray-100"
+                  className="px-4 py-2 font-medium text-start cursor-pointer text-[#333333] hover:bg-gray-100"
                 >
                   {s}
                 </li>
               ))}
             </ul>
           )}
-          </div>
 
-          <div className="flex justify-between w-full">
-            <div className=" flex items-center">
-              <img
-                src="/placeholder.svg?height=24&width=24"
-                alt="RightHomeAI"
-                className="w-6 h-6 rounded-full mr-2"
-              />
+          <div className="flex justify-between w-full mt-2">
+            <div className="flex gap-4 items-center md:ml-3">
+              <Logo/>
+              <div className="border flex px-3 py-2 rounded-xl shadow-sm">
               <span className="text-sm font-medium text-[#333333] mr-2">Quick response</span>
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="#666666"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <ChevronDown size={20}/>
+              </div>
             </div>
             <div className="flex items-center gap-1">
               <Button
