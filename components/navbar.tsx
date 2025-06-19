@@ -26,14 +26,14 @@ function Navbar() {
 
     return (
         <>
-        <div className="w-full fixed top-0 h-16 bg-[#fffff5]/80 backdrop-blur-sm flex justify-end items-center z-30">
+        <div className="w-full fixed top-0 h-16 flex justify-end items-center z-30">
             <Button
             variant="outline"
-            className="rounded-xl text-md border-2 border-[#f2f2f2] bg-white text-[#666666] hover:bg-[#f2f2f2] shadow-xl mr-4"
+            className="rounded-xl text-sm md:text-md border-none px-3 py-5 md:px-4 md:py-6 bg-[#fffef9] hover:bg-[#fffef9] text-[#333333] shadow-lg backdrop-blur-sm mr-4 mt-4"
             onClick={() => setIsMenuOpen(true)}
             >
             Sign in
-            <UserRound className="h-5 w-5 ml-2" />
+            <UserRound className="h-4 w-4 md:h-5 md:w-5 ml-2" />
             </Button>
         </div>
 
@@ -47,7 +47,7 @@ function Navbar() {
 
         {/* Modal Menu */}
         <div
-            className={`fixed bg-white rounded-[2rem] shadow-xl z-50 transition-all duration-300 ease-in-out ${
+            className={`fixed bg-[#fffef9] rounded-[2rem] shadow-xl z-50 transition-all duration-300 ease-in-out ${
             isMobile
                 ? `bottom-0 left-0 right-0 ${
                     isMenuOpen ? "translate-y-0" : "translate-y-full"
@@ -59,7 +59,7 @@ function Navbar() {
                 }`
             }`}
         >
-            <div className="m-2 p-2 rounded-[2rem] bg-[#fffff5]/70 border flex flex-col justify-between items-center border-b">
+            <div className="m-2 p-2 rounded-[2rem] bg-[#fffdf4]/70 border flex flex-col justify-between items-center border-b">
                 <div className="p-2">
                 <Logo/>
                 </div>

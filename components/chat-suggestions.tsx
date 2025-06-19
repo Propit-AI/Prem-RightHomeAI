@@ -74,7 +74,7 @@ export default function ChatSuggestions() {
           <Button
             key={index}
             variant="outline"
-            className="flex items-center justify-start border-muted shadow-md font-medium text-xs gap-2 h-auto py-3 px-6 rounded-2xl bg-[#fffff5] hover:bg-[#f2f2f2] text-[#333333] w-max flex-shrink-0 snap-center"
+            className="flex items-center justify-start border-muted shadow-md font-medium text-xs gap-2 h-auto py-3 px-6 rounded-2xl bg-[#fffef9] text-[#333333] w-max flex-shrink-0 snap-center"
             onClick={() => startConversation(suggestion.text)}
           >
             {/* <suggestion.icon className="h-4 w-4 text-[#b7b7b7]" /> */}
@@ -84,12 +84,12 @@ export default function ChatSuggestions() {
       </div>
       
       {/* Desktop grid */}
-      <div className={`hidden md:grid gap-3 grid-cols-3`}>
+      <div className={`hidden md:flex gap-2 flex-wrap`}>
         {suggestions.map((suggestion, index) => (
           <Button
             key={index}
             variant="outline"
-            className="flex items-center justify-start text-sm shadow-md border-muted gap-2 h-auto py-3 px-4 rounded-2xl bg-[#f8f8f9] hover:bg-[#f2f2f2] text-[#333333]"
+            className="flex items-center justify-start text-sm w-max shadow-md border-none gap-2 h-auto py-3 px-4 rounded-xl bg-[#fffef9] text-[#333333]"
             onClick={() => startConversation(suggestion.text)}
           >
             {/* <suggestion.icon className="h-4 w-4 text-[#b7b7b7]" /> */}

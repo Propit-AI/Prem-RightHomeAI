@@ -24,8 +24,8 @@ export default function Chat() {
     }, [isConversationStarted]);
 
 return (
-    <div className="h-screen transition-opacity duration-500 ease-in-out w-full flex flex-col md:justify-between items-center bg-[#fffff5] md:p-6 py-20 overflow-y-auto relative">
-        <div className="absolute w-screen h-screen top-0 right-0">
+    <div className="h-screen transition-opacity duration-500 overflow-hidden ease-in-out w-full flex flex-col md:justify-between items-center bg-[#fffdf4] md:p-6 py-20 overflow-y-auto relative">
+        <div className="absolute w-screen h-screen md:top-0 md:right-0">
             <Navbar />
         </div>
         {/* Mobile: Text content at top */}
@@ -46,7 +46,7 @@ return (
         )}
 
         {/* Main content area - positioned differently on mobile vs desktop */}
-        <div className="flex-grow flex flex-col items-center justify-end w-full">
+        <div className="flex-grow flex flex-col items-center justify-center w-full">
             {isConversationStarted ? (
             <ChatInterface />
             ) : (
@@ -55,7 +55,7 @@ return (
                 <h1 className="text-2xl md:text-4xl ml-6 font-medium text-start text-[#333333] mb-80 md:mb-0">
                     Hey, what's on your mind today?
                 </h1>
-                <div className="w-full max-w-3xl fixed bottom-0 md:relative transform-translate-y-0">
+                <div className="w-full max-w-3xl px-4 fixed bottom-0 md:relative transform-translate-y-0">
                     <div className="text-[#666666] md:hidden text-sm md:text-base p-2">
                     <ChatSuggestions />
                     </div>
@@ -72,11 +72,11 @@ return (
         {/* Fixed MessageInput that appears at the bottom when conversation starts */}
         {isConversationStarted && (
             <div
-            className={`fixed w-full bottom-0 shadow-md transition-all duration-300 ease-in-out ${
+            className={`fixed w-full bottom-2 transition-all duration-300 ease-in-out ${
                 showBottomInput ? "translate-y-0" : "-translate-y-full"
             }`}
             >
-            <div className="w-full max-w-3xl px-4 mx-auto pt-6 pb-2 bg-gradient-to-t from-[#fffff5] via-[#fffff5]/70 to-transparent transition-all transform">
+            <div className="w-full max-w-3xl rounded-xl px-4 mx-auto pt-6 pb-2 bg-gradient-to-t from-[#fffdf4] via-[#fffff5]/70 to-transparent transition-all transform relative">
                 <MessageInput />
             </div>
             </div>

@@ -39,7 +39,7 @@ export default function RootLayout({
         <ThemeProvider defaultTheme="light" storageKey="righthome-theme">
           <ChatProvider>
             <SidebarProvider>
-              <div className="flex h-screen bg-gradient-to-br from-[#f8f8f9] to-[#fffff5] overflow-hidden transition-all duration-300 ease-in-out">
+              <div className="flex h-screen bg-gradient-to-r from-[#f9f8f6] to-[#dddedb] overflow-hidden transition-all duration-300 ease-in-out">
                 <Sidebar />
                 <Main>{children}</Main>
               </div>

@@ -158,7 +158,7 @@ export default function DiscoverContent() {
 
             <div className="flex flex-col justify-between gap-4 md:gap-0">
               <Card
-                className="overflow-hidden bg-[#fffff5]/60 backdrop-blur-sm rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
+                className="overflow-hidden bg-[#fffdf4]/60 backdrop-blur-sm rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
                 onClick={handleBuyingGuideClick}
               >
                 <CardContent className="p-3 flex flex-col gap-4">
@@ -178,7 +178,7 @@ export default function DiscoverContent() {
               </Card>
 
               <Card
-                className="overflow-hidden bg-[#fffff5] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
+                className="overflow-hidden bg-[#fffdf4] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
                 onClick={handleHiddenCostClick}
               >
                 <CardContent className="p-3 flex items-end gap-4">
@@ -203,7 +203,7 @@ export default function DiscoverContent() {
           {/* Podcasts and Investment Guide */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 w-full">
             <Card
-              className="overflow-hidden bg-[#fffff5] rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
+              className="overflow-hidden bg-[#fffdf4] rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
               onClick={handleDreamHomeClick}
             >
               <CardContent className="p-3 flex flex-col items-center gap-4">
@@ -222,7 +222,7 @@ export default function DiscoverContent() {
 
             <div className="flex flex-col justify-between gap-4 md:gap-0">
               <Card
-                className="overflow-hidden bg-[#fffff5] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
+                className="overflow-hidden bg-[#fffdf4] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
                 onClick={handleBuyingGuideClick}
               >
                 <CardContent className="p-3 flex items-end gap-4">
@@ -240,7 +240,7 @@ export default function DiscoverContent() {
               </Card>
 
               <Card
-                className="overflow-hidden bg-[#fffff5] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
+                className="overflow-hidden bg-[#fffdf4] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
                 onClick={handleHiddenCostClick}
               >
                 <CardContent className="p-3 flex items-end gap-4">
@@ -266,7 +266,7 @@ export default function DiscoverContent() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 w-full">
             {/* Real Estate Investment */}
             <Card
-              className="overflow-hidden bg-[#fffff5] rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
+              className="overflow-hidden bg-[#fffdf4] rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
               onClick={handleDreamHomeClick}
             >
               <CardContent className="p-3 flex flex-col items-center gap-4">
@@ -286,7 +286,7 @@ export default function DiscoverContent() {
             {/* Side Cards */}
             <div className="flex flex-col justify-between gap-4 md:gap-0">
               <Card
-                className="overflow-hidden bg-[#fffff5] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
+                className="overflow-hidden bg-[#fffdf4] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
                 onClick={handleMarketPredictionClick}
               >
                 <CardContent className="p-3 flex items-end gap-4">
@@ -304,7 +304,7 @@ export default function DiscoverContent() {
               </Card>
 
               <Card
-                className="overflow-hidden bg-[#fffff5] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
+                className="overflow-hidden bg-[#fffdf4] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
                 onClick={handleAIValuationClick}
               >
                 <CardContent className="p-3 flex items-end gap-4">
@@ -325,13 +325,13 @@ export default function DiscoverContent() {
 
           {/* Virtual Reality Tours Section */}
           <Card
-            className="overflow-hidden bg-[#fffff5] border border-[#e6e6e6] text-white rounded-[3rem] shadow-md border-none cursor-pointer transition-transform hover:scale-[1.01] w-full mb-10"
+            className="overflow-hidden bg-[#fffdf4] border border-[#e6e6e6] text-white rounded-[3rem] shadow-md border-none cursor-pointer transition-transform hover:scale-[1.01] w-full mb-10"
             onClick={handleVirtualTourClick}
           >
             <CardContent className="p-8">
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="mb-6 md:mb-0">
-                  <div className="inline-flex items-center px-4 py-1 rounded-full bg-[#999999]/30 text-sm text-[#333333] font-medium mb-4">
+                  <div className="inline-flex items-center px-4 py-1 rounded-full bg-[#fffef9] shadow text-sm text-[#333333] font-medium mb-4">
                     <div className="h-2 w-2 rounded-full bg-[#333333]/90 animate-pulse mr-2" />
                     <span>New Feature</span>
                   </div>
@@ -342,7 +342,7 @@ export default function DiscoverContent() {
                     Experience properties remotely with our immersive 3D virtual
                     tour technology powered by AI
                   </p>
-                  <Button className="mt-4 bg-[#999999]/30 text-[#333333] hover:bg-[#999999]/20 shadow-md rounded-[1rem] px-6 font-medium">
+                  <Button className="mt-4 bg-[#fffef9] hover:bg-[#fffef9] text-[#333333] shadow-md rounded-xl px-6 font-medium">
                     Explore Tours
                   </Button>
                 </div>
@@ -358,7 +358,7 @@ export default function DiscoverContent() {
           </Card>
 
           {/* Smart Property Assistant */}
-          <Card className="overflow-hidden bg-[#fffff5] border border-[#e6e6e6] rounded-[3rem] shadow-md border-none w-full">
+          <Card className="overflow-hidden bg-[#fffdf4] border border-[#e6e6e6] rounded-[3rem] shadow-md border-none w-full">
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <h2 className="text-2xl font-bold mb-2 text-[#333333]">
@@ -378,7 +378,7 @@ export default function DiscoverContent() {
                 ].map((question, idx) => (
                   <Button
                     key={idx}
-                    className="text-sm shadow-md border-muted gap-2 h-auto py-3 px-4 rounded-[1rem] bg-[#999999]/30 hover:bg-[#999999]/20 text-[#333333]"
+                    className="text-sm shadow-md border-muted gap-2 h-auto py-3 px-4 rounded-xl bg-[#fffef9] hover:bg-[#fffef9] text-[#333333]"
                     onClick={() => startConversation(question)}
                   >
                     {question}

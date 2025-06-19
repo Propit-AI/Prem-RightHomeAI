@@ -36,11 +36,11 @@ const sidebarItems = [
     href: "/labs",
     icon: Webhook,
   },
-  {
-    name: "Properties",
-    href: "/properties",
-    icon: BrickWall,
-  }
+  // {
+  //   name: "Properties",
+  //   href: "/properties",
+  //   icon: BrickWall,
+  // }
 ];
 
 export default function Sidebar() {
@@ -61,30 +61,29 @@ export default function Sidebar() {
   return (
     <div
       className={cn(
-        "h-screen bg-[#f8f8f9] absolute md:relative flex flex-col shrink-0 transition-all duration-300 z-50",
+        "h-screen absolute md:relative bg-gradient-to-r from-[#f9f8f6] via-[#f9f8f6] to-transparent flex flex-col shrink-0 transition-all duration-300 z-50",
         isOpen ? "w-[324px]" : "w-0"
       )}
     >
       <div
-        className={`p-4 flex items-center justify-between h-16 ${
-          isOpen ? "bg-[#f9f9f8]" : "bg-transparent"
+        className={`p-4 mt-2 flex items-center justify-between h-16
         } w-full`}
       >
         {isOpen && (
           <div className="flex items-center gap-3">
             <Logo/>
-            <h1 className="text-md font-bold text-[#333333] font-segoe">RightHomeAI</h1>
+            <h1 className="text-md font-semibold text-[#333333] font-segoe">RightHomeAI</h1>
           </div>
         )}
 
-        <div className="flex items-center bg-[#fffff5]/70 backdrop-blur-sm p-1 rounded-[1rem]">
+        <div className="flex items-center bg-[#fffef9] backdrop-blur-md shadow p-0 md:p-1 rounded-xl">
           <Button
             variant="ghost"
             size="icon"
             onClick={toggleSidebar}
             className="z-10 text-[#666666] hover:bg-[#f2f2f2]"
           >
-            <PanelLeft className="h-6 w-6" />
+            <PanelLeft className="h-5 w-5 md:h-6 md:w-6" />
           </Button>
           <Link href={"/chat"} className="flex items-center gap-3">
             <Button
@@ -97,7 +96,7 @@ export default function Sidebar() {
               }}
               className="z-10 text-[#666666] hover:bg-[#f2f2f2]"
             >
-              <SquarePen className="h-6 w-6" />
+              <SquarePen className="h-5 w-5 md:h-6 md:w-6" />
             </Button>
           </Link>
           <DropdownMenu>
@@ -107,7 +106,7 @@ export default function Sidebar() {
                 size="icon"
                 className="rounded-full h-8 w-8"
               >
-                <ChevronDown className="h-6 w-6 text-[#666666]" />
+                <ChevronDown className="h-5 w-5 md:h-6 md:w-6 text-[#666666]" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="bg-[#fffff5]">
@@ -157,23 +156,23 @@ export default function Sidebar() {
                   className={cn(
                     "w-10 h-10 rounded-xl shadow-sm flex items-center justify-center",
                     item.name === "Discover"
-                      ? "bg-[#fff6e3]"
+                      ? "bg-[#fffef9]"
                       : item.name === "Labs"
                       ? "bg-[#ffd8e0]"
                       : "bg-[#f2e1e1]",
                       item.name === "Properties"
                       ? "bg-[#e3f2ff]"
-                      : "bg-[#e3ffe3]"
+                      : "bg-[#fffef9]"
                   )}
                 >
                   <item.icon
                     className={cn(
                       "w-5 h-5",
                       item.name === "Discover"
-                        ? "text-[#c17c2e]"
+                        ? "text-[#d4b75f]"
                         : item.name === "Labs"
                         ? "text-[#e75480]"
-                        : "text-[#1b9435]"
+                        : "text-[#fffef9]"
                     )}
                   />
                 </div>
@@ -202,7 +201,7 @@ export default function Sidebar() {
           <h3 className="text-lg font-bold text-[#333333] mb-3">
             Conversations
           </h3>
-          <p className="text-sm text-[#444444] font-medium mb-4">
+          <p className="text-sm md:text-md text-[#444444] font-medium mb-4">
             Conversations with RightHomeAI will be shown here. Sign in to keep
             your conversations.
           </p>
@@ -211,7 +210,7 @@ export default function Sidebar() {
               // Replace the following line with your actual sign-in logic or redirect
               window.location.href = "/login";
             }}
-            className="w-full rounded-2xl bg-[#333333] hover:bg-[#444444] text-white text-md"
+            className="w-full rounded-xl bg-[#1c1c1cf0] shadow-xl hover:bg-[#444444] text-white text-md"
           >
             Sign in
           </Button>

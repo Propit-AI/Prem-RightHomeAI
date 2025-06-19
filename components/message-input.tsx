@@ -7,6 +7,7 @@ import { Mic, ArrowUpFromDot, Plus, ChevronDown } from "lucide-react";
 import { useChat } from "@/contexts/chat-context";
 import { useRouter } from "next/navigation";
 import Logo from "./ui/logo";
+import VoiceChat from "./VoiceChat";
 
 export default function MessageInput() {
   const [input, setInput] = useState("");
@@ -90,9 +91,9 @@ export default function MessageInput() {
   };
 
   return (
-    <div className="flex w-full md:w-3xl z-40 bg-gradient-to-t to-[#fffadd] from-white border-2 border-white shadow-xl my-2 p-[6px] md:p-[8px] rounded-[2rem] relative">
+    <div className="flex w-full md:w-3xl z-40 bg-gradient-to-t to-[#fffdf4] from-white border-2 border-white shadow-2xl my-2 pt-[6px] md:pt-[8px] px-[6px] md:px-[8px] rounded-[2rem] relative">
       <form onSubmit={handleSubmit} className="w-full">
-        <div className="flex flex-col justify-center gap-2 items-center bg-white/70 backdrop-blur-sm rounded-[1.5rem] px-[6px] md:px-[8px] pl-2">
+        <div className="flex flex-col justify-center gap-2 items-center bg-gradient-to-b from-white to-[#fffdf4]  backdrop-blur-sm rounded-[1.5rem] px-[6px] md:p-[8px] pl-2">
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -121,7 +122,10 @@ export default function MessageInput() {
             </ul>
           )}
 
-          <div className="flex justify-between w-full mt-2">
+          <div className="flex justify-between w-full mt-2 mb-2">
+            {/* <div>
+              <VoiceChat/>
+            </div> */}
             <div className="flex gap-4 items-center md:ml-3">
               <Logo/>
               <div className="border flex px-3 py-2 rounded-xl shadow-sm">
@@ -136,7 +140,7 @@ export default function MessageInput() {
                 variant="ghost"
                 className="rounded-full text-[#777777]"
               >
-                <Plus className="h-5 w-5" />
+                <Plus className="h-5 w-5 md:h-6 md:w-6" />
               </Button>
 
               {input.trim() ? (
@@ -148,14 +152,9 @@ export default function MessageInput() {
                   <ArrowUpFromDot className="h-5 w-5" />
                 </Button>
               ) : (
-                <Button
-                  type="button"
-                  size="icon"
-                  variant="ghost"
-                  className="rounded-full text-[#666666]"
-                >
-                  <Mic className="h-5 w-5" />
-                </Button>
+                <>
+                  <VoiceChat />
+                </>
               )}
             </div>
           </div>

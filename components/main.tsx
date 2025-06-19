@@ -7,7 +7,7 @@ export default function Main({ children }: { children: React.ReactNode }) {
 
     return (
         <main
-        className={`transition-all duration-300 bg-gradient-to-tl from-[#fffadd] to-[#fffff5] ease-in-out flex-1 relative overflow-hidden md:shadow-xl md:rounded-2xl ${
+        className={`transition-all duration-300 bg-gradient-to-tl from-[#fffdf4] to-[#fffef9] ease-in-out flex-1 relative overflow-hidden md:shadow-xl md:rounded-2xl ${
             isOpen ? 'md:m-2' : 'm-0'
         }`}
         >
