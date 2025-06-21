@@ -106,7 +106,7 @@ export default function MessageInput() {
 
           {/* Suggestions */}
           {!hasSelectedSuggestion && suggestions.length > 0 && (
-            <ul className="absolute bottom-[100%] left-0 w-full bg-white border border-[#fffadd] rounded-[1.5rem] shadow-lg z-50 text-sm overflow-hidden">
+            <ul className="absolute bottom-[100%] left-0 w-full bg-gradient-to-b from-white to-[#fffdf4] border border-[#fffadd] rounded-[1.5rem] shadow-lg z-50 p-2 leading-none overflow-hidden">
               {suggestions.map((s, i) => (
                 <li
                   key={i}
@@ -115,7 +115,7 @@ export default function MessageInput() {
                     setSuggestions([]);
                     setHasSelectedSuggestion(true);
                   }}
-                  className="px-4 py-2 font-medium text-start cursor-pointer text-[#333333] hover:bg-gray-100"
+                  className="px-4 py-2 text-[16px] font-medium text-start cursor-pointer text-[#333333] hover:bg-gray-100"
                 >
                   {s}
                 </li>
