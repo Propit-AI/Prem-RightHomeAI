@@ -67,11 +67,20 @@ function MessageBubble({ message }: { message: MessageType }) {
 
   // Parse the mixed content
   const parseMessageContent = (content: string) => {
+    console.log("=== FRONTEND PARSING ===");
+    console.log("Raw message content:", JSON.stringify(content));
+    console.log("Content length:", content.length);
+    console.log("First 10 chars:", JSON.stringify(content.substring(0, 10)));
+    console.log("First char code:", content.charCodeAt(0));
+    
     const jsonMatch = content.match(/```json\s*([\s\S]*?)\s*```/);
     if (jsonMatch) {
       try {
         const jsonData = JSON.parse(jsonMatch[1]);
         const introText = content.substring(0, content.indexOf('```json')).trim();
+        console.log("Has JSON - Intro text:", JSON.stringify(introText));
+        console.log("Intro text length:", introText.length);
+        console.log("Intro first 10 chars:", JSON.stringify(introText.substring(0, 10)));
         return {
           hasJson: true,
           introText,
@@ -81,6 +90,10 @@ function MessageBubble({ message }: { message: MessageType }) {
         console.error('Failed to parse JSON:', error);
       }
     }
+    
+    console.log("No JSON - Using full content as intro");
+    console.log("=== END FRONTEND PARSING ===");
+    
     return {
       hasJson: false,
       introText: content,
@@ -88,16 +101,29 @@ function MessageBubble({ message }: { message: MessageType }) {
     };
   };
 
-  const parsedContent = typeof message.content === "string" && !isUser 
-    ? parseMessageContent(message.content)
-    : { hasJson: false, introText: typeof message.content === "string" ? message.content : "", jsonData: null };
+  // Handle different content types
+  let messageContent = "";
+  if (typeof message.content === "string") {
+    messageContent = message.content;
+  } else if (message.content && typeof message.content === "object") {
+    // If message.content is an object with text property
+    messageContent = (message.content as any).text || JSON.stringify(message.content);
+  }
+
+  const parsedContent = !isUser && messageContent
+    ? parseMessageContent(messageContent)
+    : { hasJson: false, introText: messageContent, jsonData: null };
 
   useEffect(() => {
     if (isUser) {
-      setDisplayedIntroText(typeof message.content === "string" ? message.content : "");
+      setDisplayedIntroText(messageContent);
       return;
     }
 
+    console.log("=== TYPING ANIMATION START ===");
+    console.log("Parsed intro text:", JSON.stringify(parsedContent.introText));
+    console.log("Intro text length:", parsedContent.introText.length);
+    
     // Reset states
     setDisplayedIntroText("");
     setDisplayedGreeting("");
@@ -107,14 +133,25 @@ function MessageBubble({ message }: { message: MessageType }) {
 
     // Type the intro text first
     let i = 0;
-    const speed = 15;
+    const speed = 10;
     const introText = parsedContent.introText;
+
+    if (!introText || introText.length === 0) {
+      console.log("No intro text to animate");
+      setIntroComplete(true);
+      return;
+    }
+
+    console.log("Starting typing animation for:", JSON.stringify(introText.substring(0, 20)));
 
     const introInterval = setInterval(() => {
       if (i < introText.length) {
-        setDisplayedIntroText((prev) => prev + introText[i]);
+        const nextChar = introText[i];
+        console.log(`Adding char ${i}: '${nextChar}' (code: ${nextChar.charCodeAt(0)})`);
+        setDisplayedIntroText((prev) => prev + nextChar);
         i++;
       } else {
+        console.log("Intro animation complete");
         clearInterval(introInterval);
         setIntroComplete(true);
         
@@ -141,8 +178,11 @@ function MessageBubble({ message }: { message: MessageType }) {
       }
     }, speed);
 
-    return () => clearInterval(introInterval);
-  }, [message.content, isUser]);
+    return () => {
+      console.log("Cleaning up typing animation");
+      clearInterval(introInterval);
+    };
+  }, [message.content, isUser, parsedContent.introText]);
 
   return (
     <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
@@ -160,12 +200,12 @@ function MessageBubble({ message }: { message: MessageType }) {
         }`}
       >
         {isUser ? (
-          <p className="text-sm whitespace-pre-wrap">{displayedIntroText}</p>
+          <p className="text-sm md:text-[16px] leading-snug whitespace-pre-wrap">{displayedIntroText}</p>
         ) : ( 
           <div>
-            {/* Intro Text */}
+            {/* Intro Text - FIXED: Only show animated text, not the full message */}
             <div className="p-4">
-              <p className="text-sm whitespace-pre-wrap">
+              <p className="text-sm md:text-[16px] leading-snug whitespace-pre-wrap">
                 {displayedIntroText}
                 {!introComplete && (
                   <span className="animate-pulse">|</span>
@@ -177,9 +217,8 @@ function MessageBubble({ message }: { message: MessageType }) {
             {parsedContent.hasJson && parsedContent.jsonData && introComplete && (
               <div className="px-4 pb-2">
                 <div className="bg-[#f8f8f9] p-3 rounded-lg shadow">
-                  <p className="text-sm text- font-medium">
+                  <p className="text-sm md:text-[16px] leading-snug font-medium">
                     {displayedGreeting}
-                    {/* {message.content} */}
                     {!greetingComplete && (
                       <span className="animate-pulse">|</span>
                     )}
