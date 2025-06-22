@@ -17,6 +17,7 @@ RightHomeAI is an intelligent real estate platform that leverages artificial int
 
 ### Mobile Experience
 <img src="/public/screenshots/mobileSS.png" alt="Mobile View" width="300"/>
+<img src="/public/screenshots/mobileChatSS.png" alt="Mobile View" width="300"/>
 
 *Experience the power of AI-driven home search*
 
