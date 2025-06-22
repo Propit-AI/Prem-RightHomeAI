@@ -1,0 +1,763 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "title": "Luxury 3 BHK",
+      "price": "\u20b9109 Lakhs",
+      "location": "Gurgaon Sector 45",
+      "features": [
+        "Modular Kitchen",
+        "Covered Parking",
+        "Gym Nearby"
+      ],
+      "link": "https://righthome.ai/property/1000",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 2,
+      "title": "Independent House",
+      "price": "\u20b952 Lakhs",
+      "location": "Rohini, New Delhi",
+      "features": [
+        "Furnished",
+        "Near School",
+        "Shopping Complex Nearby"
+      ],
+      "link": "https://righthome.ai/property/1001",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 3,
+      "title": "3 BHK Flat",
+      "price": "\u20b970 Lakhs",
+      "location": "Noida Sector 62",
+      "features": [
+        "Corner Property",
+        "24x7 Security",
+        "Semi-Furnished"
+      ],
+      "link": "https://righthome.ai/property/1002",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 4,
+      "title": "1 BHK Apartment",
+      "price": "\u20b939 Lakhs",
+      "location": "Vasant Kunj, New Delhi",
+      "features": [
+        "Corner Property",
+        "24x7 Security",
+        "Semi-Furnished"
+      ],
+      "link": "https://righthome.ai/property/1003",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 5,
+      "title": "3 BHK Duplex",
+      "price": "\u20b961 Lakhs",
+      "location": "Noida Sector 62",
+      "features": [
+        "Gated Society",
+        "Park Facing",
+        "2 Bathrooms"
+      ],
+      "link": "https://righthome.ai/property/1004",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 6,
+      "title": "Studio Apartment",
+      "price": "\u20b974 Lakhs",
+      "location": "Janakpuri, New Delhi",
+      "features": [
+        "Corner Property",
+        "24x7 Security",
+        "Semi-Furnished"
+      ],
+      "link": "https://righthome.ai/property/1005",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 7,
+      "title": "3 BHK Duplex",
+      "price": "\u20b994 Lakhs",
+      "location": "Noida Sector 62",
+      "features": [
+        "Gated Society",
+        "Park Facing",
+        "2 Bathrooms"
+      ],
+      "link": "https://righthome.ai/property/1006",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 8,
+      "title": "1 RK Flat",
+      "price": "\u20b977 Lakhs",
+      "location": "Lajpat Nagar, New Delhi",
+      "features": [
+        "Corner Property",
+        "24x7 Security",
+        "Semi-Furnished"
+      ],
+      "link": "https://righthome.ai/property/1007",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 9,
+      "title": "1 RK Flat",
+      "price": "\u20b948 Lakhs",
+      "location": "Lajpat Nagar, New Delhi",
+      "features": [
+        "Modular Kitchen",
+        "Covered Parking",
+        "Gym Nearby"
+      ],
+      "link": "https://righthome.ai/property/1008",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 10,
+      "title": "1 RK Flat",
+      "price": "\u20b993 Lakhs",
+      "location": "Vasant Kunj, New Delhi",
+      "features": [
+        "Corner Property",
+        "24x7 Security",
+        "Semi-Furnished"
+      ],
+      "link": "https://righthome.ai/property/1009",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 11,
+      "title": "Luxury 3 BHK",
+      "price": "\u20b984 Lakhs",
+      "location": "Saket, New Delhi",
+      "features": [
+        "Near Metro",
+        "Lift",
+        "Balcony",
+        "Parking"
+      ],
+      "link": "https://righthome.ai/property/1010",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 12,
+      "title": "2 BHK Apartment",
+      "price": "\u20b959 Lakhs",
+      "location": "Noida Sector 62",
+      "features": [
+        "Corner Property",
+        "24x7 Security",
+        "Semi-Furnished"
+      ],
+      "link": "https://righthome.ai/property/1011",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 13,
+      "title": "3 BHK Duplex",
+      "price": "\u20b986 Lakhs",
+      "location": "Janakpuri, New Delhi",
+      "features": [
+        "Gated Society",
+        "Park Facing",
+        "2 Bathrooms"
+      ],
+      "link": "https://righthome.ai/property/1012",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 14,
+      "title": "Studio Apartment",
+      "price": "\u20b959 Lakhs",
+      "location": "Vasant Kunj, New Delhi",
+      "features": [
+        "Near Metro",
+        "Lift",
+        "Balcony",
+        "Parking"
+      ],
+      "link": "https://righthome.ai/property/1013",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 15,
+      "title": "Studio Apartment",
+      "price": "\u20b959 Lakhs",
+      "location": "Gurgaon Sector 45",
+      "features": [
+        "Near Metro",
+        "Lift",
+        "Balcony",
+        "Parking"
+      ],
+      "link": "https://righthome.ai/property/1014",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 16,
+      "title": "Luxury 3 BHK",
+      "price": "\u20b963 Lakhs",
+      "location": "Noida Sector 62",
+      "features": [
+        "Near Metro",
+        "Lift",
+        "Balcony",
+        "Parking"
+      ],
+      "link": "https://righthome.ai/property/1015",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 17,
+      "title": "2 BHK Apartment",
+      "price": "\u20b945 Lakhs",
+      "location": "Dwarka, New Delhi",
+      "features": [
+        "Furnished",
+        "Near School",
+        "Shopping Complex Nearby"
+      ],
+      "link": "https://righthome.ai/property/1016",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 18,
+      "title": "Studio Apartment",
+      "price": "\u20b956 Lakhs",
+      "location": "Noida Sector 62",
+      "features": [
+        "Modular Kitchen",
+        "Covered Parking",
+        "Gym Nearby"
+      ],
+      "link": "https://righthome.ai/property/1017",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 19,
+      "title": "Luxury 3 BHK",
+      "price": "\u20b9116 Lakhs",
+      "location": "Noida Sector 18",
+      "features": [
+        "Modular Kitchen",
+        "Covered Parking",
+        "Gym Nearby"
+      ],
+      "link": "https://righthome.ai/property/1018",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 20,
+      "title": "3 BHK Flat",
+      "price": "\u20b952 Lakhs",
+      "location": "Saket, New Delhi",
+      "features": [
+        "Furnished",
+        "Near School",
+        "Shopping Complex Nearby"
+      ],
+      "link": "https://righthome.ai/property/1019",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 21,
+      "title": "1 RK Flat",
+      "price": "\u20b9113 Lakhs",
+      "location": "Gurgaon DLF Phase 3",
+      "features": [
+        "Gated Society",
+        "Park Facing",
+        "2 Bathrooms"
+      ],
+      "link": "https://righthome.ai/property/1020",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 22,
+      "title": "1 BHK Apartment",
+      "price": "\u20b9110 Lakhs",
+      "location": "Saket, New Delhi",
+      "features": [
+        "Furnished",
+        "Near School",
+        "Shopping Complex Nearby"
+      ],
+      "link": "https://righthome.ai/property/1021",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 23,
+      "title": "Studio Apartment",
+      "price": "\u20b956 Lakhs",
+      "location": "Dwarka, New Delhi",
+      "features": [
+        "Furnished",
+        "Near School",
+        "Shopping Complex Nearby"
+      ],
+      "link": "https://righthome.ai/property/1022",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 24,
+      "title": "2 BHK Builder Floor",
+      "price": "\u20b980 Lakhs",
+      "location": "Noida Sector 18",
+      "features": [
+        "Corner Property",
+        "24x7 Security",
+        "Semi-Furnished"
+      ],
+      "link": "https://righthome.ai/property/1023",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 25,
+      "title": "Independent House",
+      "price": "\u20b949 Lakhs",
+      "location": "Noida Sector 62",
+      "features": [
+        "Near Metro",
+        "Lift",
+        "Balcony",
+        "Parking"
+      ],
+      "link": "https://righthome.ai/property/1024",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 26,
+      "title": "3 BHK Duplex",
+      "price": "\u20b997 Lakhs",
+      "location": "Gurgaon Sector 45",
+      "features": [
+        "Furnished",
+        "Near School",
+        "Shopping Complex Nearby"
+      ],
+      "link": "https://righthome.ai/property/1025",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 27,
+      "title": "1 BHK Apartment",
+      "price": "\u20b957 Lakhs",
+      "location": "Dwarka, New Delhi",
+      "features": [
+        "Modular Kitchen",
+        "Covered Parking",
+        "Gym Nearby"
+      ],
+      "link": "https://righthome.ai/property/1026",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 28,
+      "title": "1 RK Flat",
+      "price": "\u20b989 Lakhs",
+      "location": "Dwarka, New Delhi",
+      "features": [
+        "Furnished",
+        "Near School",
+        "Shopping Complex Nearby"
+      ],
+      "link": "https://righthome.ai/property/1027",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 29,
+      "title": "3 BHK Flat",
+      "price": "\u20b9118 Lakhs",
+      "location": "Lajpat Nagar, New Delhi",
+      "features": [
+        "Near Metro",
+        "Lift",
+        "Balcony",
+        "Parking"
+      ],
+      "link": "https://righthome.ai/property/1028",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 30,
+      "title": "3 BHK Duplex",
+      "price": "\u20b978 Lakhs",
+      "location": "Saket, New Delhi",
+      "features": [
+        "Furnished",
+        "Near School",
+        "Shopping Complex Nearby"
+      ],
+      "link": "https://righthome.ai/property/1029",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 31,
+      "title": "2 BHK Builder Floor",
+      "price": "\u20b984 Lakhs",
+      "location": "Lajpat Nagar, New Delhi",
+      "features": [
+        "Gated Society",
+        "Park Facing",
+        "2 Bathrooms"
+      ],
+      "link": "https://righthome.ai/property/1030",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 32,
+      "title": "Luxury 3 BHK",
+      "price": "\u20b9103 Lakhs",
+      "location": "Dwarka, New Delhi",
+      "features": [
+        "Gated Society",
+        "Park Facing",
+        "2 Bathrooms"
+      ],
+      "link": "https://righthome.ai/property/1031",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 33,
+      "title": "1 BHK Apartment",
+      "price": "\u20b950 Lakhs",
+      "location": "Noida Sector 62",
+      "features": [
+        "Modular Kitchen",
+        "Covered Parking",
+        "Gym Nearby"
+      ],
+      "link": "https://righthome.ai/property/1032",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 34,
+      "title": "1 RK Flat",
+      "price": "\u20b946 Lakhs",
+      "location": "Lajpat Nagar, New Delhi",
+      "features": [
+        "Gated Society",
+        "Park Facing",
+        "2 Bathrooms"
+      ],
+      "link": "https://righthome.ai/property/1033",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 35,
+      "title": "3 BHK Duplex",
+      "price": "\u20b9120 Lakhs",
+      "location": "Noida Sector 18",
+      "features": [
+        "Modular Kitchen",
+        "Covered Parking",
+        "Gym Nearby"
+      ],
+      "link": "https://righthome.ai/property/1034",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 36,
+      "title": "Luxury 3 BHK",
+      "price": "\u20b958 Lakhs",
+      "location": "Lajpat Nagar, New Delhi",
+      "features": [
+        "Corner Property",
+        "24x7 Security",
+        "Semi-Furnished"
+      ],
+      "link": "https://righthome.ai/property/1035",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 37,
+      "title": "3 BHK Duplex",
+      "price": "\u20b943 Lakhs",
+      "location": "Saket, New Delhi",
+      "features": [
+        "Furnished",
+        "Near School",
+        "Shopping Complex Nearby"
+      ],
+      "link": "https://righthome.ai/property/1036",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 38,
+      "title": "1 RK Flat",
+      "price": "\u20b944 Lakhs",
+      "location": "Vasant Kunj, New Delhi",
+      "features": [
+        "Modular Kitchen",
+        "Covered Parking",
+        "Gym Nearby"
+      ],
+      "link": "https://righthome.ai/property/1037",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 39,
+      "title": "3 BHK Flat",
+      "price": "\u20b961 Lakhs",
+      "location": "Rohini, New Delhi",
+      "features": [
+        "Gated Society",
+        "Park Facing",
+        "2 Bathrooms"
+      ],
+      "link": "https://righthome.ai/property/1038",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 40,
+      "title": "Independent House",
+      "price": "\u20b955 Lakhs",
+      "location": "Noida Sector 62",
+      "features": [
+        "Near Metro",
+        "Lift",
+        "Balcony",
+        "Parking"
+      ],
+      "link": "https://righthome.ai/property/1039",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 41,
+      "title": "Independent House",
+      "price": "\u20b989 Lakhs",
+      "location": "Saket, New Delhi",
+      "features": [
+        "Modular Kitchen",
+        "Covered Parking",
+        "Gym Nearby"
+      ],
+      "link": "https://righthome.ai/property/1040",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 42,
+      "title": "Studio Apartment",
+      "price": "\u20b941 Lakhs",
+      "location": "Noida Sector 62",
+      "features": [
+        "Corner Property",
+        "24x7 Security",
+        "Semi-Furnished"
+      ],
+      "link": "https://righthome.ai/property/1041",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 43,
+      "title": "2 BHK Builder Floor",
+      "price": "\u20b9118 Lakhs",
+      "location": "Noida Sector 18",
+      "features": [
+        "Corner Property",
+        "24x7 Security",
+        "Semi-Furnished"
+      ],
+      "link": "https://righthome.ai/property/1042",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 44,
+      "title": "1 BHK Apartment",
+      "price": "\u20b9100 Lakhs",
+      "location": "Rohini, New Delhi",
+      "features": [
+        "Near Metro",
+        "Lift",
+        "Balcony",
+        "Parking"
+      ],
+      "link": "https://righthome.ai/property/1043",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 45,
+      "title": "Studio Apartment",
+      "price": "\u20b976 Lakhs",
+      "location": "Janakpuri, New Delhi",
+      "features": [
+        "Near Metro",
+        "Lift",
+        "Balcony",
+        "Parking"
+      ],
+      "link": "https://righthome.ai/property/1044",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 46,
+      "title": "2 BHK Builder Floor",
+      "price": "\u20b9111 Lakhs",
+      "location": "Noida Sector 18",
+      "features": [
+        "Gated Society",
+        "Park Facing",
+        "2 Bathrooms"
+      ],
+      "link": "https://righthome.ai/property/1045",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 47,
+      "title": "Luxury 3 BHK",
+      "price": "\u20b937 Lakhs",
+      "location": "Saket, New Delhi",
+      "features": [
+        "Corner Property",
+        "24x7 Security",
+        "Semi-Furnished"
+      ],
+      "link": "https://righthome.ai/property/1046",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 48,
+      "title": "1 BHK Apartment",
+      "price": "\u20b997 Lakhs",
+      "location": "Rohini, New Delhi",
+      "features": [
+        "Gated Society",
+        "Park Facing",
+        "2 Bathrooms"
+      ],
+      "link": "https://righthome.ai/property/1047",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    },
+    {
+      "id": 49,
+      "title": "Studio Apartment",
+      "price": "\u20b979 Lakhs",
+      "location": "Rohini, New Delhi",
+      "features": [
+        "Corner Property",
+        "24x7 Security",
+        "Semi-Furnished"
+      ],
+      "link": "https://righthome.ai/property/1048",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": false
+    },
+    {
+      "id": 50,
+      "title": "2 BHK with Terrace",
+      "price": "\u20b952 Lakhs",
+      "location": "Rohini, New Delhi",
+      "features": [
+        "Modular Kitchen",
+        "Covered Parking",
+        "Gym Nearby"
+      ],
+      "link": "https://righthome.ai/property/1049",
+      "image": "/api/placeholder/400/300",
+      "type": "Loft",
+      "isNew": true
+    }
+  ]
+}
