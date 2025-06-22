@@ -7,10 +7,10 @@ RightHomeAI is an intelligent real estate platform that leverages artificial int
 ## 📸 Screenshots
 
 ### Main Interface
-![RightHomeAI Homepage](screenshots/homeSS.png)
+![RightHomeAI Homepage](/public/screenshots/homeSS.png)
 
 ### AI Chat Interface
-![AI Conversation](screenshots/chatSS.png)
+![AI Conversation](/public/screenshots/chatSS.png)
 
 <!-- ### Voice Interaction
 ![Voice Feature](./screenshots/voice-interaction.png) -->
