@@ -4,6 +4,22 @@
 
 RightHomeAI is an intelligent real estate platform that leverages artificial intelligence to help users discover their ideal home through natural conversations and smart recommendations.
 
+## 📸 Screenshots
+
+### Main Interface
+![RightHomeAI Homepage](screenshots/homeSS.png)
+
+### AI Chat Interface
+![AI Conversation](screenshots/chatSS.png)
+
+<!-- ### Voice Interaction
+![Voice Feature](./screenshots/voice-interaction.png) -->
+
+### Mobile Experience
+<img src="./screenshots/mobile-view.png" alt="Mobile View" width="300"/>
+
+*Experience the power of AI-driven home search*
+
 ## ✨ Features
 
 - 🗣️ **Voice-Enabled Search** - Natural voice interactions for property discovery
@@ -130,7 +146,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Vapi.ai** for voice AI capabilities
 - **Next.js** team for the amazing framework
 - **Vercel** for seamless deployment platform
-- 
+
+## 📞 Contact
+
+- **Developer**: [Your Name]
+- **Email**: your.email@example.com
+- **LinkedIn**: [Your LinkedIn Profile]
+- **Twitter**: [@yourhandle]
+
 ---
 
 ⭐ If you found this project helpful, please give it a star on GitHub!
