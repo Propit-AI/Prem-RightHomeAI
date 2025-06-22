@@ -148,13 +148,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Next.js** team for the amazing framework
 - **Vercel** for seamless deployment platform
 
-## 📞 Contact
-
-- **Developer**: [Your Name]
-- **Email**: your.email@example.com
-- **LinkedIn**: [Your LinkedIn Profile]
-- **Twitter**: [@yourhandle]
-
 ---
 
 ⭐ If you found this project helpful, please give it a star on GitHub!
