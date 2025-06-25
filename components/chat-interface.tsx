@@ -15,7 +15,7 @@ export default function ChatInterface() {
 
     return (
         <div className="w-full max-w-3xl mx-auto px-4">
-        <div className="space-y-6 py-20">
+        <div className="space-y-2 py-28">
             {messages.map((message) => (
             <MessageBubble key={message.id} message={message} />
             ))}
@@ -86,7 +86,7 @@ function formatText(text: string): JSX.Element {
         if (numberedListMatch) {
         const [, number, content] = numberedListMatch;
         formattedLines.push(
-            <div key={key++} className="flex items-start gap-2 my-2">
+            <div key={key++} className="flex items-start gap-2">
             <span className="font-bold text-gray-800 min-w-[20px]">{number}.</span>
             <div className="flex-1">{parseMarkdown(content)}</div>
             </div>
@@ -99,7 +99,7 @@ function formatText(text: string): JSX.Element {
         if (bulletMatch) {
         const [, content] = bulletMatch;
         formattedLines.push(
-            <div key={key++} className="flex items-start gap-2 my-1">
+            <div key={key++} className="flex items-start gap-2">
             <span className="text-gray-600 min-w-[20px]">•</span>
             <div className="flex-1">{parseMarkdown(content)}</div>
             </div>
@@ -109,7 +109,7 @@ function formatText(text: string): JSX.Element {
 
         // Regular paragraph
         formattedLines.push(
-        <p key={key++} className="my-2 leading-relaxed">
+        <p key={key++} className="my-1 leading-relaxed">
             {parseMarkdown(trimmedLine)}
         </p>
         );
@@ -151,7 +151,7 @@ function MessageBubble({ message }: { message: MessageType }) {
     // Use a timeout to ensure state is properly reset before starting
     const startTyping = () => {
         let i = 0;
-        const speed = 10;
+        const speed = 5;
 
         const typingInterval = setInterval(() => {
         if (i < messageContent.length) {
