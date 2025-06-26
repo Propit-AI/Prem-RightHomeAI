@@ -24,6 +24,7 @@ import {
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useSidebar } from "@/contexts/sidebar-context";
 import Logo from "./ui/logo";
+import Image from "next/image";
 
 const sidebarItems = [
   {
@@ -70,9 +71,16 @@ export default function Sidebar() {
         } w-full`}
       >
         {isOpen && (
-          <div className="flex items-center gap-3">
-            <Logo/>
-            <h1 className="text-md font-semibold text-[#333333] font-segoe">RightHomeAI</h1>
+          <div className="flex items-center gap-1">
+            {/* <Logo/> */}
+            <Image
+              src="/images/icon.png"
+              alt="RightHomeAI Logo"
+              width={35}
+              height={35}
+              className="rounded-full"
+            />
+            <h1 className="text-md font-bold text-[#333333] font-segoe">RightHomeAI</h1>
           </div>
         )}
 

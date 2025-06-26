@@ -8,6 +8,7 @@ import { useChat } from "@/contexts/chat-context";
 import { useRouter } from "next/navigation";
 import Logo from "./ui/logo";
 import VoiceChat from "./VoiceChat";
+import Image from "next/image";
 
 export default function MessageInput() {
   const [input, setInput] = useState("");
@@ -128,7 +129,13 @@ export default function MessageInput() {
               <VoiceChat/>
             </div> */}
             <div className="flex gap-4 items-center md:ml-3">
-              <Logo/>
+              <Image
+                src="/images/icon.png"
+                alt="RightHomeAI Logo"
+                width={35}
+                height={35}
+                className="rounded-full"
+              />
               <div className="border flex px-3 py-2 rounded-xl shadow-sm">
               <span className="text-sm font-medium text-[#333333] mr-2">Quick response</span>
               <ChevronDown size={20}/>
