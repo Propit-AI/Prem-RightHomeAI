@@ -130,7 +130,7 @@ export default function MessageInput() {
             </div> */}
             <div className="flex gap-4 items-center md:ml-3">
               <Image
-                src="/images/icon.png"
+                src="images/icon.png"
                 alt="RightHomeAI Logo"
                 width={35}
                 height={35}
