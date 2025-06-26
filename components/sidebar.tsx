@@ -74,7 +74,7 @@ export default function Sidebar() {
           <div className="flex items-center gap-1">
             {/* <Logo/> */}
             <Image
-              src="images/icon.png"
+              src="/images/Icon.png"
               alt="RightHomeAI Logo"
               width={35}
               height={35}
