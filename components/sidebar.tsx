@@ -71,15 +71,8 @@ export default function Sidebar() {
         } w-full`}
       >
         {isOpen && (
-          <div className="flex items-center gap-1">
-            {/* <Logo/> */}
-            <Image
-              src="/images/Icon.png"
-              alt="RightHomeAI Logo"
-              width={35}
-              height={35}
-              className="rounded-full"
-            />
+          <div className="flex items-center gap-3">
+            <Logo/>
             <h1 className="text-md font-bold text-[#333333] font-segoe">RightHomeAI</h1>
           </div>
         )}

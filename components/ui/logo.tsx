@@ -9,11 +9,11 @@ export default function Logo() {
             className="w-6 h-6"
             >
             <path
-                className="main-shape fill-[#333333]"
+                className="main-shape fill-[#ff7700]"
                 d="M 120,10 L 120,20 L 120,180 L 40,180 L 40,90"
             />
             <path
-                className="cut-shape fill-[#333333]"
+                className="cut-shape fill-[#ff7700]"
                 d="M 120,90 L 200,10 L 200,90"
             />
             </svg>

@@ -8,7 +8,6 @@ import { useChat } from "@/contexts/chat-context";
 import { useRouter } from "next/navigation";
 import Logo from "./ui/logo";
 import VoiceChat from "./VoiceChat";
-import Image from "next/image";
 
 export default function MessageInput() {
   const [input, setInput] = useState("");
@@ -92,7 +91,7 @@ export default function MessageInput() {
   };
 
   return (
-    <div className="flex w-full md:w-3xl z-40 bg-gradient-to-t to-[#fffdf4] from-white border-2 border-white shadow-2xl my-2 pt-[6px] md:pt-[8px] px-[6px] md:px-[8px] rounded-[2rem] relative">
+    <div className="flex w-full md:w-3xl z-50 bg-gradient-to-t to-[#fffdf4] from-white border-2 border-white shadow-2xl my-2 pt-[6px] md:pt-[8px] px-[6px] md:px-[8px] rounded-[2rem] relative">
       <form onSubmit={handleSubmit} className="w-full">
         <div className="flex flex-col justify-center gap-2 items-center bg-gradient-to-b from-white to-[#fffdf4]  backdrop-blur-sm rounded-[1.5rem] px-[6px] md:p-[8px] pl-2">
           <Input
@@ -125,17 +124,8 @@ export default function MessageInput() {
           )}
 
           <div className="flex justify-between w-full mt-2 mb-2">
-            {/* <div>
-              <VoiceChat/>
-            </div> */}
             <div className="flex gap-4 items-center md:ml-3">
-              <Image
-                src="/images/Icon.png"
-                alt="RightHomeAI Logo"
-                width={35}
-                height={35}
-                className="rounded-full"
-              />
+              <Logo/>
               <div className="border flex px-3 py-2 rounded-xl shadow-sm">
               <span className="text-sm font-medium text-[#333333] mr-2">Quick response</span>
               <ChevronDown size={20}/>

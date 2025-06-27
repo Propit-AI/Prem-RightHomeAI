@@ -112,9 +112,9 @@ const VoiceInput: React.FC<VoiceInputProps> = ({
                     <div className="mb-12">
                         <h1 className="text-4xl font-light text-gray-800 mb-4">
                             {isLoading ? 'Connecting...' : 
-                             isListening ? "I'm listening" : 
-                             isCallActive ? 'Ready to listen' : 
-                             'Voice Assistant'}
+                                isListening ? "I'm listening" : 
+                                isCallActive ? 'Ready to listen' : 
+                                'Voice Assistant'}
                         </h1>
                         {isCallActive && (
                             <p className="text-gray-600 text-lg">
