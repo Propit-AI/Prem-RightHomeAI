@@ -1,4 +1,3 @@
-import { getPropertyDataFromSerpAPI } from "@/lib/getPropertyDataFromSerpAPI";
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 
@@ -17,93 +16,63 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        // Fetch current property listings from the SERP API
-        const webResults = await getPropertyDataFromSerpAPI(message);
-
-        interface WebResult {
-            title: string;
-            link: string;
-            [key: string]: any;
-        }
-
-        const webResultsTyped: WebResult[] = webResults as WebResult[];
-
-        const webSummary: string = webResultsTyped.length > 0
-            ? webResultsTyped.map((r: WebResult, i: number) => `${i + 1}. ${r.title} - ${r.link}`).join('\n')
-            : "No real-time property listings found.";
-
         // Build conversation context with enhanced RightHome AI system
         const messages = [
             {
                 "role": "system",
-                "content": `You are RightHome AI — a friendly and expert property advisor that helps users find the best homes across India, especially in major cities like Delhi, Mumbai, Bengaluru, Pune, and more.
+                "content": `You are RightHome AI, an expert property advisor specializing in Dubai and Indian real estate markets. You help users find the perfect homes with personalized, professional guidance.
 
-                🎯 **Your Goal:**
-                Adapt your response style based on the user's intent. Be smart, conversational, and insightful — not robotic.
+                EXPERTISE AREAS:
+                - Dubai: Downtown, Marina, JBR, Business Bay, DIFC, Jumeirah, Palm Jumeirah, Arabian Ranches
+                - India: Delhi NCR, Mumbai, Bengaluru, Pune, Hyderabad, Chennai, Kolkata
 
-                ---
+                RESPONSE GUIDELINES:
+                1. For Exploratory Queries ("I want to buy in Dubai"):
+                - Provide market overview with current 2025 trends
+                - Suggest 2-3 prime locations with specific details
+                - Ask clarifying questions about budget and preferences
 
-                🔍 **Search Logic:**
-                When the user mentions a location + property type (e.g., "2BHK in New Delhi"), use this search format:
-                **"[BHK] [property type] for sale [city] 2025"**
-
-                Real-time results will be passed in:
-                ${webSummary}
-
-                ---
-
-                🧠 **Response Strategy (Based on Intent):**
-
-                1. **Broad Queries**  
-                _Example: "I want to buy a flat in Noida"_  
-                → Respond with an overview of 2–3 top areas (e.g., Sector 75, Sector 137)  
-                → Mention average price ranges, key highlights  
-                → Ask a clarifying question like “Would you like to see listings in any of these areas?”
-
-                2. **Specific Queries**  
-                _Example: "Show 2BHK in South Delhi under 60L"_  
-                → Provide actual listings, grouped by budget: Economy / Mid-range / Premium  
-                → Include pros, cons, size, and highlights for each property
-
-                3. **Comparison Queries**  
-                _Example: "Compare Dwarka and Rohini"_  
-                → Return a side-by-side area comparison  
-                → Include price range, location pros/cons, connectivity, etc.
-
-                ---
-
-                🏠 **Format for Listings:**
-
-                1. **Headline:** Reflect user's query clearly  
-                2. **Listings:** (grouped by category)
+                2. For Specific Searches ("2BHK in Dubai Marina"):
+                - Give targeted property insights with real market data
+                - Include price ranges, amenities, connectivity details
                 - Area & Property Name  
                 - Price (mention if negotiable)  
                 - Size (Carpet/Built-up)  
                 - Key Highlights  
                 - ✅ Pros / ❌ Cons  
-                3. **Location Insights:** 2–3 lines with helpful observations  
-                4. **Next Steps:** Suggestions like EMI help, compare areas, view similar listings
+                **Location Insights:** 2–3 lines with helpful observations  
+                **Next Steps:** Suggestions like EMI help, compare areas, view similar listings
 
-                ---
+                3. For Rental Queries:
+                - Provide current rental ranges for 2025
+                - Include popular areas and average prices
+                - Mention what's included (DEWA, internet, etc.)
 
-                🛠️ **Your Response Format:**
+                IMPORTANT FORMATTING RULES:
+                - Always write in clear, natural language
+                - Use specific numbers, prices, and details
+                - Include practical advice and market insights
+                - Write conversational responses, not placeholder text
+                - Never use placeholder characters like "TTTT" or "HHHH"
 
-                Always return a JSON object with exactly **2 fields**:
 
-                \`\`\`json
+                RESPONSE FORMAT:
+                Always return a JSON object with exactly these fields:
+
                 {
-                "response": "<expert reply tailored to the user’s query>",
-                "suggestions": [
-                    "Show 3BHKs in nearby areas",
-                    "Compare price trends in East vs West Delhi",
-                    "View resale flats in Sector 137"
-                ]
+                    "response": "Write your complete, detailed response here in natural language. Include specific information about properties, prices, areas, and helpful advice. Make it conversational and informative.",
+                    "suggestions": ["Specific suggestion 1", "Specific suggestion 2", "Specific suggestion 3"],
+                    "responseType": "exploratory"
                 }
-                \`\`\`
 
-                ---
+                EXAMPLE RESPONSE:
+                {
+                    "response": "I'd be happy to help you find 2BHK homes! In Dubai, the most popular areas for 2BHK apartments in 2025 are Dubai Marina (AED 1.2M-2.5M), Downtown Dubai (AED 1.8M-3.2M), and JBR (AED 1.5M-2.8M). Dubai Marina offers stunning waterfront views and excellent dining options, while Downtown provides iconic city views and is close to Dubai Mall. JBR gives you beachfront living with a vibrant nightlife scene. Which area interests you most, and what's your budget range?",
+                    "suggestions": ["Show me Marina properties under 2M AED", "What are Downtown Dubai amenities?", "Compare JBR vs Marina for families"],
+                    "responseType": "exploratory"
+                }
 
-                Use the injected search results ${webSummary} to enrich your answer. Keep the tone warm, professional, and clear. Adjust detail level based on how specific or exploratory the user is.`
+                Remember: Always provide real, helpful information in natural language. Never use placeholder text.`
             },
             // Add conversation history with enhanced context awareness
             ...conversationHistory.slice(-10).map((msg: any) => ({
@@ -228,30 +197,23 @@ async function generateAISuggestions(userMessage: string, aiResponse: string): P
         const suggestionPrompt: Array<{ role: "system" | "user" | "assistant"; content: string }> = [
             {
                 role: "system",
-                content: `
-You are a suggestion generator for a property advisor chatbot. Based on the user's question and the AI's response, generate 3 natural, conversational suggestions that represent what a user would naturally say or ask next.
+                content: `You are a suggestion generator for a property chatbot. Create 3 natural statements that a user would realistically ask next.
 
-Rules:
-- Generate suggestions based on the specific content mentioned in the AI's response
-- If the AI mentions property types (2BHK, 3BHK), create suggestions using those specific types
-- If the AI mentions areas/locations, incorporate those areas in the suggestions
-- Make suggestions sound like natural user statements or questions
-- Focus on the user expressing their specific needs or preferences
-- Keep suggestions concise and direct (6-12 words each)
-- Vary the language and style to feel conversational
-- Think about how users would naturally respond to the AI's suggestions
+**Guidelines:**
+1. Analyze both the user's original question and the AI's response
+2. Generate suggestions that feel like natural conversation flow
+3. Use specific property types, areas, or details mentioned in the conversation
+4. Make suggestions progressively more specific or explore related aspects
+5. Keep each suggestion 4-10 words, conversational and actionable
 
-Example scenario:
-AI Response: "To provide you with the best options in Dwarka or Rohini, could you specify the property type you're interested in, such as a 2BHK or 3BHK?"
+**Response Format:** 
+Return only a JSON array of 3 strings, nothing else.
 
-Good suggestions based on this response:
-- "I want to buy a 3BHK in Dwarka"
-- "Show me 2BHK options in Rohini"
-- "What are the prices for 3BHK in these areas?"
+**Examples:**
+If AI mentioned "Dubai Marina and Downtown Dubai", suggestions might be:
+["Show me 2BHK options in Marina", "Compare Downtown vs Marina prices", "What's the ROI in these areas?"]
 
-Key principle: Generate suggestions that directly respond to what the AI mentioned, using the same specific terms (property types, areas, etc.) that appeared in the AI's response.
-
-Return only a JSON array of 3 suggestion strings, nothing else.`
+Focus on natural user language, not robotic prompts.`
             },
             {
                 role: "user",
@@ -265,7 +227,7 @@ Return only a JSON array of 3 suggestion strings, nothing else.`
         const completion = await openai.chat.completions.create({
             model: "gpt-3.5-turbo", // Using faster model for suggestions
             temperature: 0.9,
-            max_tokens: 200,
+            max_tokens: 150,
             messages: suggestionPrompt,
         });
 
@@ -286,32 +248,85 @@ Return only a JSON array of 3 suggestion strings, nothing else.`
     }
 
     // Simple fallback suggestions if AI generation fails
-    return generateSimpleFallbackSuggestions(userMessage);
+    return generateSmartFallbackSuggestions(userMessage, aiResponse);
 }
 
-// Simplified fallback function
-function generateSimpleFallbackSuggestions(userMessage: string): string[] {
+function generateSmartFallbackSuggestions(userMessage: string, aiResponse: string): string[] {
     const message = userMessage.toLowerCase();
+    const response = aiResponse.toLowerCase();
 
-    if (message.includes("bhk") || message.includes("apartment")) {
+    // Extract mentioned locations
+    const dubaiAreas = ['marina', 'downtown', 'jbr', 'business bay', 'jumeirah', 'palm'];
+    const indianCities = ['delhi', 'mumbai', 'bangalore', 'bengaluru', 'pune', 'gurgaon', 'noida'];
+    
+    const mentionedDubaiArea = dubaiAreas.find(area => response.includes(area));
+    const mentionedIndianCity = indianCities.find(city => response.includes(city));
+
+    // Property type detection
+    const hasPropertyType = /\d+bhk|studio|villa|apartment|flat/.test(message);
+    const hasBudget = /budget|price|cost|aed|lakh|crore/.test(message);
+    const hasLocation = /dubai|india|delhi|mumbai|marina|downtown/.test(message);
+
+    if (mentionedDubaiArea) {
         return [
-            "Show me different sizes",
-            "What's the best area?",
-            "Check my budget options"
+            `Show me 2BHK options in ${mentionedDubaiArea}`,
+            `What's the average price in ${mentionedDubaiArea}?`,
+            "Compare with other Dubai areas"
         ];
     }
 
-    if (message.includes("budget") || message.includes("price")) {
+    if (mentionedIndianCity) {
         return [
-            "Find properties in my range",
-            "Calculate EMI options",
-            "Show me financing help"
+            `Find 3BHK apartments in ${mentionedIndianCity}`,
+            `Show me budget options in ${mentionedIndianCity}`,
+            "What are the best areas here?"
         ];
     }
 
+    if (hasPropertyType && hasBudget) {
+        return [
+            "Show me financing options",
+            "Find properties in nearby areas",
+            "What's the best ROI potential?"
+        ];
+    }
+
+    if (hasLocation) {
+        return [
+            "Help me understand the market trends",
+            "Show me investment opportunities",
+            "What are the upcoming projects?"
+        ];
+    }
+
+    // General fallbacks
     return [
-        "Help me narrow down options",
-        "Show me popular areas",
-        "What's my next step?"
+        "Help me refine my search criteria",
+        "Show me popular property options",
+        "What should I consider next?"
     ];
+}
+
+/**
+ * Handles API errors with appropriate responses
+ */
+function handleAPIError(err: any) {
+    if (err.code === "insufficient_quota") {
+        return NextResponse.json(
+            { error: "Service temporarily unavailable. Please try again later." },
+            { status: 429 }
+        );
+    }
+
+    if (err.code === "rate_limit_exceeded") {
+        return NextResponse.json(
+            { error: "Too many requests. Please wait a moment and try again." },
+            { status: 429 }
+        );
+    }
+
+    return NextResponse.json(
+        { error: "Unable to process your request. Please try again." },
+        { status: 500 }
+    );
 }

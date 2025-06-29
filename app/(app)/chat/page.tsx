@@ -51,8 +51,8 @@ return (
             <ChatInterface />
             ) : (
             <>
-                <div className="max-w-3xl w-full gap-12 flex flex-col">
-                <h1 className="text-2xl md:text-4xl ml-6 font-medium text-start text-[#333333] mb-80 md:mb-0">
+                <div className="max-w-3xl w-full gap-6 flex flex-col">
+                <h1 className="text-2xl md:text-4xl ml-6 font-medium text-start text-[#333333] mb-80 md:mb-12">
                     Hey, what's on your mind today?
                 </h1>
                 <div className="w-full max-w-3xl px-4 fixed bottom-0 md:relative transform-translate-y-0">

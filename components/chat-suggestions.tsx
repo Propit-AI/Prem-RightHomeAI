@@ -43,12 +43,12 @@ export default function ChatSuggestions() {
   return (
     <div className="w-full h-full max-w-3xl mx-auto">
       {/* Mobile scrollable container */}
-      <div className={`md:hidden flex overflow-x-auto pb-4 gap-3 snap-x snap-mandatory scrollbar-hide`}>
+      <div className={`md:hidden flex overflow-x-auto pb-4 gap-3 snap-x snap-mandatory scrollbar-hide px-1`}>
         {suggestions.map((suggestion, index) => (
           <Button
             key={index}
             variant="outline"
-            className="flex items-center justify-start border-muted shadow-md font-medium text-xs gap-2 h-auto py-3 px-6 rounded-2xl bg-[#fffef9] text-[#333333] w-max flex-shrink-0 snap-center z-50"
+            className="flex items-center justify-start border-muted shadow-md font-medium text-[13px] gap-2 h-auto p-2 rounded-xl bg-[#fffef9] text-[#333333] w-max flex-shrink-0 snap-center z-50"
             onClick={() => startConversation(suggestion.text)}
           >
             {/* <suggestion.icon className="h-4 w-4 text-[#b7b7b7]" /> */}
@@ -58,12 +58,12 @@ export default function ChatSuggestions() {
       </div>
       
       {/* Desktop grid */}
-      <div className={`hidden md:flex gap-2 flex-wrap`}>
+      <div className={`hidden md:flex gap-2 px-2 flex-wrap`}>
         {suggestions.map((suggestion, index) => (
           <Button
             key={index}
             variant="outline"
-            className="flex items-center justify-start text-sm w-max shadow-md border-none gap-2 h-auto py-3 px-4 rounded-xl bg-[#fffef9] text-[#333333] z-10"
+            className="flex items-center justify-start text-[15px] w-max shadow-md border-none gap-2 h-auto py-3 px-4 rounded-xl bg-[#fffef9] text-[#333333] z-10"
             onClick={() => startConversation(suggestion.text)}
           >
             {/* <suggestion.icon className="h-4 w-4 text-[#b7b7b7]" /> */}
