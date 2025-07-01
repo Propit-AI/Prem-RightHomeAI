@@ -28,15 +28,15 @@ export default function ChatSuggestions() {
   }, [])
 
   const suggestions = [
-  { text: "2BHK in Delhi under 80 lakhs", icon: Home },
-  { text: "Luxury apartments in Gurgaon", icon: Building },
-  { text: "Properties near metro stations", icon: MapPin },
-  { text: "Best areas for families in Bangalore", icon: Compass },
-  { text: "Schedule a visit for 3BHK Noida", icon: Calendar },
-  { text: "Loan pre-approval help", icon: FileText },
-  { text: "Compare price trends Mumbai vs Pune", icon: DollarSign },
-  { text: "Show me villas in Hyderabad", icon: Home },
-  { text: "Top resale flats in Chennai", icon: Search },
+  { text: "2BHK under 80 lakhs", icon: Home },
+  { text: "Explore luxury apartments", icon: Building },
+  { text: "Properties near metro access", icon: MapPin },
+  { text: "Best areas for families", icon: Compass },
+  { text: "Schedule a 3BHK visit", icon: Calendar },
+  { text: "Need help with loan approval?", icon: FileText },
+  { text: "Compare city price trends", icon: DollarSign },
+  { text: "Show me available villas", icon: Home },
+  { text: "Top resale flats to explore", icon: Search },
 ];
 
 
@@ -51,7 +51,7 @@ export default function ChatSuggestions() {
             className="flex items-center justify-start border-muted shadow-md font-medium text-[13px] gap-2 h-auto p-2 rounded-xl bg-[#fffef9] text-[#333333] w-max flex-shrink-0 snap-center z-50"
             onClick={() => startConversation(suggestion.text)}
           >
-            {/* <suggestion.icon className="h-4 w-4 text-[#b7b7b7]" /> */}
+            {/* <suggestion.icon className="h-4 w-4 text-[#b7b7 b7]" /> */}
             <span className="">{suggestion.text}</span>
           </Button>
         ))}
