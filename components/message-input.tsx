@@ -99,7 +99,7 @@ export default function MessageInput() {
             onChange={(e) => setInput(e.target.value)}
             // onFocus={handleInputFocus}
             type="text"
-            placeholder="Message RightHomeAI"
+            placeholder="Message WayHomeAI"
             disabled={isLoading}
             className="flex-1 border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-[#333333] text-[16px] font-medium md:text-[18px]"
           />
