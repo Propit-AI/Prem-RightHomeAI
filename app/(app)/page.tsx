@@ -196,7 +196,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-4">
                   <Image
-                    src={"/images/img3.png"}
+                    src={"/images/G1img2.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -220,18 +220,19 @@ export default function DiscoverContent() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 w-full">
             <Card
               className="overflow-hidden bg-[#fffdf4] rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
-              onClick={handleInvestment}
+              onClick={handleTopAreas}
             >
               <CardContent className="p-3 flex flex-col items-center gap-4">
                 <Image
-                  src={"/images/img1.png"}
+                  src={"/images/G2img1.png"}
                   alt="Podcast"
                   width={112}
                   height={112}
-                  className="w-full h-72 object-cover rounded-[3rem]"
+                  className="w-full h-[20rem] object-cover rounded-[3rem]"
                 />
-                <h3 className="text-[20px] md:text-[24px] text-[#333333] font-medium mb-1 p-4">
-                  Investment Strategy Guide
+                <h3 className="text-[20px] md:text-[24px] text-[#333333] font-medium mb-1 px-4 py-1">
+                  Top Areas in Dubai for Families & Expats
+                  
                 </h3>
               </CardContent>
             </Card>
@@ -239,11 +240,29 @@ export default function DiscoverContent() {
             <div className="flex flex-col justify-between gap-4">
               <Card
                 className="overflow-hidden bg-[#fffdf4] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
+                onClick={handleInvestment}
+              >
+                <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
+                  <Image
+                    src={"/images/G2img0.png"}
+                    alt="Investment Guide"
+                    width={112}
+                    height={112}
+                    className="h-full w-full object-cover rounded-[3rem]"
+                  />
+                  <h3 className="text-[16px] md:text-[20px] text-[#333333] p-2 font-medium mb-1">
+                    Investment Strategy Guide
+                  </h3>
+                </CardContent>
+              </Card>
+
+              <Card
+                className="overflow-hidden bg-[#fffdf4] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
                 onClick={handleFirstTimeBuyer}
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/img2.png"}
+                    src={"/images/G2img2.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -251,24 +270,6 @@ export default function DiscoverContent() {
                   />
                   <h3 className="text-[16px] md:text-[20px] text-[#333333] p-2 font-medium mb-1">
                     First-Time Home Buyer Checklist
-                  </h3>
-                </CardContent>
-              </Card>
-
-              <Card
-                className="overflow-hidden bg-[#fffdf4] rounded-[3rem] md:rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
-                onClick={handleTopAreas}
-              >
-                <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
-                  <Image
-                    src={"/images/img3.png"}
-                    alt="Investment Guide"
-                    width={112}
-                    height={112}
-                    className="h-full w-full object-cover rounded-[3rem]"
-                  />
-                  <h3 className="text-[16px] md:text-[20px] text-[#333333] p-2 font-medium mb-1">
-                    Top Areas in Dubai for Families & Expats
                   </h3>
                 </CardContent>
               </Card>
@@ -290,11 +291,11 @@ export default function DiscoverContent() {
             >
               <CardContent className="p-3 flex flex-col items-center gap-4">
                 <Image
-                  src={"/images/img1.png"}
+                  src={"/images/G3img0.png"}
                   alt="Podcast"
                   width={112}
                   height={112}
-                  className="w-full h-72 object-cover rounded-[3rem]"
+                  className="w-full h-72 top-2 object-cover rounded-[3rem]"
                 />
                 <h3 className="text-[20px] md:text-[24px] text-[#333333] font-medium mb-1 p-4">
                   Understanding freehold vs leasehold in UAE
@@ -307,7 +308,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/img2.png"}
+                    src={"/images/G3Img5.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -326,7 +327,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/img3.png"}
+                    src={"/images/G3img2.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -343,7 +344,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/img3.png"}
+                    src={"/images/G3img3.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -360,7 +361,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/img3.png"}
+                    src={"/images/G3img4.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -386,7 +387,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src="/images/mic.jpg" // replace with relevant image
+                    src="/images/play.png" // replace with relevant image
                     alt="Rental Yield"
                     width={112}
                     height={112}
@@ -413,15 +414,15 @@ export default function DiscoverContent() {
               className="overflow-hidden bg-[#fffdf4] rounded-[4rem] shadow-md border-[#e6e6e6] cursor-pointer transition-transform hover:scale-[1.02]"
               onClick={askZara1}
             >
-              <CardContent className="p-3 flex flex-col items-center gap-4">
+              <CardContent className="p-3 flex flex-col items-center gap-2">
                 <Image
-                  src={"/images/img1.png"}
+                  src={"/images/ZaraImg1.png"}
                   alt="Podcast"
                   width={112}
                   height={112}
-                  className="w-full h-72 object-cover rounded-[3rem]"
+                  className="w-full h-[21rem] object-cover rounded-[3rem]"
                 />
-                <h3 className="text-[20px] md:text-[24px] text-[#333333] font-medium mb-1 p-4">
+                <h3 className="text-[20px] md:text-[24px] text-[#333333] font-medium px-4 py-1">
                   Zara, where should I buy if I want to rent it out later?
                 </h3>
               </CardContent>
@@ -434,7 +435,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/img2.png"}
+                    src={"/images/ZaraImg2.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -452,7 +453,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/img3.png"}
+                    src={"/images/ZaraImg3.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -517,7 +518,7 @@ export default function DiscoverContent() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 md:grid-row-1 grid-rows-2 gap-4 mt-6">
+              <div className="grid md:grid-cols-2  grid-rows-1 gap-4 mt-6">
                 <div className="bg-gradient-to-t to-[#fffdf4] from-white border-2 text-center rounded-xl border-white shadow-md">
                   <button
                     className="text-sm font-semibold py-3 px-4 text-[#333333]"
