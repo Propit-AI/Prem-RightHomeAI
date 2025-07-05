@@ -73,7 +73,7 @@ export default function Sidebar() {
         {isOpen && (
           <div className="flex items-center gap-3">
             <Logo/>
-            <h1 className="text-md font-bold text-[#333333] font-segoe">RightHomeAI</h1>
+            <h1 className="text-md font-bold text-[#333333] font-segoe">WayHomeAI</h1>
           </div>
         )}
 
@@ -203,7 +203,7 @@ export default function Sidebar() {
             Conversations
           </h3>
           <p className="text-sm md:text-md text-[#444444] font-medium mb-4">
-            Conversations with RightHomeAI will be shown here. Sign in to keep
+            Conversations with WayHomeAI will be shown here. Sign in to keep
             your conversations.
           </p>
           <Button

@@ -10,7 +10,7 @@ export default function LabsContent() {
         <div className="flex items-center justify-center mb-6">
           <div className="bg-[#333333] text-white px-6 py-3 rounded-[3rem] shadow-md">
             <h2 className="text-xl font-bold tracking-wide">
-              RightHome<span className="font-normal">Labs</span>
+              WayHome<span className="font-normal">Labs</span>
             </h2>
           </div>
         </div>
