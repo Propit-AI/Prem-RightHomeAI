@@ -62,7 +62,7 @@ export default function Sidebar() {
   return (
     <div
       className={cn(
-        "h-screen absolute md:relative bg-gradient-to-r from-[#f9f8f6] via-[#f9f8f6] to-transparent flex flex-col shrink-0 transition-all duration-300 z-50",
+        "h-screen absolute md:relative bg-gradient-to-r from-[#f9f8f6] to-[#f9f8f6] flex flex-col shrink-0 transition-all duration-300 z-50",
         isOpen ? "w-[324px]" : "w-0"
       )}
     >

@@ -115,7 +115,7 @@ export default function DiscoverContent() {
             <Navbar />
           </div>
       {!isConversationStarted && (
-        <div className="p-6 max-w-4xl w-full mx-auto flex flex-col items-center mt-20 mb-28 relative">
+        <div className="p-6 max-w-4xl w-full mx-auto flex flex-col items-center mt-12 mb-28 relative">
           {/* Futuristic background elements */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
             <div className="absolute top-1/4 -left-20 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
@@ -157,7 +157,7 @@ export default function DiscoverContent() {
                     <span className="mx-2">•</span>
                     <span>3 min</span>
                   </div>
-                  <p className="text-white/90 text-xs md:text-sm">
+                  <p className="text-white/90 text-sm">
                     Dubai sees record off-plan sales; Marina, JVC, and Business Bay top buyer interest. UAE’s Golden Visa attracts global investors.
                   </p>
                   <Button className="bg-white mt-6 text-[#333333] hover:bg-white/90 w-full rounded-[2rem] flex items-center gap-2 px-6 py-4 group-hover:shadow-lg transition-all">
@@ -224,7 +224,7 @@ export default function DiscoverContent() {
             >
               <CardContent className="p-3 flex flex-col items-center gap-4">
                 <Image
-                  src={"/images/G2img1.png"}
+                  src={"/heroImages/img1.png"}
                   alt="Podcast"
                   width={112}
                   height={112}
@@ -244,7 +244,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/G2img0.png"}
+                    src={"/heroImages/img2.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -262,7 +262,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/G2img2.png"}
+                    src={"/heroImages/img3.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -291,7 +291,7 @@ export default function DiscoverContent() {
             >
               <CardContent className="p-3 flex flex-col items-center gap-4">
                 <Image
-                  src={"/images/G3img0.png"}
+                  src={"/heroImages/img4.png"}
                   alt="Podcast"
                   width={112}
                   height={112}
@@ -308,7 +308,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/G3Img5.png"}
+                    src={"/heroImages/img5.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -327,7 +327,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/G3img2.png"}
+                    src={"/heroImages/img3.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -344,7 +344,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/G3img3.png"}
+                    src={"/heroImages/img2.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -361,7 +361,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/G3img4.png"}
+                    src={"/heroImages/img4.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
