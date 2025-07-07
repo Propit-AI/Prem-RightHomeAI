@@ -416,7 +416,7 @@ export default function DiscoverContent() {
             >
               <CardContent className="p-3 flex flex-col items-center gap-2">
                 <Image
-                  src={"/images/ZaraImg1.png"}
+                  src={"/heroImages/zara.png"}
                   alt="Podcast"
                   width={112}
                   height={112}
@@ -435,7 +435,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/ZaraImg2.png"}
+                    src={"/heroImages/family.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
@@ -453,7 +453,7 @@ export default function DiscoverContent() {
               >
                 <CardContent className="p-3 grid grid-cols-2 items-end gap-2">
                   <Image
-                    src={"/images/ZaraImg3.png"}
+                    src={"/heroImages/cons.png"}
                     alt="Investment Guide"
                     width={112}
                     height={112}
