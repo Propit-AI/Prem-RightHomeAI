@@ -76,7 +76,7 @@ const VoiceInput: React.FC<VoiceInputProps> = ({
     }, [isCallActive]);
 
     const handleMicClick = () => {
-        router.push('/chat/talk');
+        router.push('/Zara');
     };
 
     const handleClose = () => {

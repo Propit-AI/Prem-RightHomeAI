@@ -10,13 +10,14 @@ export default function LabsContent() {
         <div className="flex items-center justify-center mb-6">
           <div className="bg-[#333333] text-white px-6 py-3 rounded-[3rem] shadow-md">
             <h2 className="text-xl font-bold tracking-wide">
-              WayHome<span className="font-normal">Labs</span>
+              WayHomeAI<span className="font-normal">Labs</span>
             </h2>
           </div>
         </div>
 
         <h1 className="text-[26px] md:text-4xl font-medium text-center text-[#333333] mb-12">
-          RightHome Labs features are experimental AI initiatives
+          {`Explore the Future of Real Estate in Dubai`}
+          <span className="block mt-2 font-bold">“Welcome to the WayHomeAI Lab”</span>
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -165,7 +166,7 @@ export default function LabsContent() {
           </button>
         </div>
 
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <div className="flex flex-col items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-8">
               <div>
@@ -227,7 +228,7 @@ export default function LabsContent() {
               .
             </h1>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
