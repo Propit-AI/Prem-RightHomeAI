@@ -1,9 +1,4 @@
 /** @type {import('next').NextConfig} */
-// module.exports = {
-//   env: {
-//     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
-//   },
-// };
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
@@ -14,7 +9,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+  async redirects() {
+    return [
+      {
+        source: '/chat/talk',
+        destination: '/Zara',
+        permanent: false, // Use true if this should be a permanent redirect
+      },
+    ];
+  },
+};
 
-
-export default nextConfig
+export default nextConfig;
